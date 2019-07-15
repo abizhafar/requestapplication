@@ -22,6 +22,7 @@
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbar2SupportedContent">
+                <a class="navbar-brand" href="#" contenteditable="true" ><img width="120px" src="<?php echo base_url() ?>assets/images/logopal.png" alt=""></a>
         <ul class="navbar-nav">
           <li class="nav-item mx-2">
             <a class="nav-link" href="#">Home</a>
@@ -45,7 +46,7 @@
           <h2 class="text-capitalize w-100" style=""><b>WELCOME</b></h2>
           <h3 class="display-3">Form Application Request</h3>
           <h3 style="" class=""><b>DIVISI TEKNOLOGI PT. PAL INDONESIA</b></h3>
-          <a href="#register" class="btn btn-lg mt-4 btn-outline-light">Daftarkan Permintaan Aplikasi</a><i class="d-block fa fa-angle-down pt-5 fa-3x"></i>
+          <a href="#register" class="btn btn-lg mt-4 btn-outline-light">Daftarkan Permintaan Aplikasi</a>
         </div>
       </div>
     </div>
@@ -59,12 +60,12 @@
   <div class="py-5 bg-light" id="cek" style="">
     <div class="container">
       <div class="row">
-        <div class="p-5 col-md-12 d-flex flex-column justify-content-center">
+        <div class="p-5 col-md-12 d-flex flex-column justify-content-center outline-primary ">
           <h1 class="text-capitalize w-100 text-left" style=""><b>Cek Status Permintaan Aplikasi</b></h1>
           <form action="">
             <div class="input-group">
               <input type="text" class="form-control form-control-lg" placeholder="Nomor Registrasi PSA">
-              <div class="input-group-append"><button class="btn btn-primary btn-block btn-lg text-white" type="button" onclick="myFunction()" id="cari">Cari</button></div>
+              <div class="input-group-append"><button class="btn btn-outline-primary btn-lg text-blue" type="button" onclick="myFunction()" id="cari">Cari</button></div>
             </div>
           </form>
         </div>
@@ -108,16 +109,17 @@
       <div class="row w-100">
         <div class="col-lg-6 col-md-12 my-4 mx-5 w-100" style="">
           <h3>Login Admin</h3>
-          <form id="c_form-h" class="">
-            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">E-mail</label>
+             <?php echo form_open('Home/CekLogin'); ?>
+                    <?php echo validation_errors(); ?>
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Username</label>
               <div class="col-10">
-                <input type="text" class="form-control" id="inputmailh" placeholder="mail@example.com"> </div>
+                <input type="text" class="form-control" name="username" id="inputmailh" placeholder="mail@example.com"> </div>
             </div>
             <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label">Password</label>
               <div class="col-10">
-                <input type="password" class="form-control" id="inputpasswordh" placeholder="Password"> </div>
+                <input type="password" class="form-control" name="password" id="inputpasswordh" placeholder="Password"> </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn mt-1 btn-outline-light col-lg-12">Login</button>
           </form>
         </div>
       </div>
