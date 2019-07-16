@@ -17,6 +17,7 @@
 										<tr>
 											<th>Kode Divisi</th>
 											<th>Nama Divisi</th>
+											<th>Aksi</th>
 											
 										</tr>
 									</thead>
@@ -25,6 +26,9 @@
 											<td>Trident</td>
 											<td>Internet
 												Explorer 4.0
+												<td class="actions">
+															<a href=""><i class="fa fa-pencil"></i></a>
+															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
 											</td>
 											
 							</div>
