@@ -22,8 +22,8 @@
 				$this->load->view('home');
 			} else {
 				$session_data=$this->session->userdata('logged_in');
-				$akses=$session_data['hak_akses'];
-				redirect('dashbord','refresh');
+				$akses=$session_data['akses'];
+				redirect('Dashboard','refresh');
 				
 			}
 		}
@@ -37,10 +37,10 @@
 					$sess_array= array();
 					foreach ($result as $row) {
 						$sess_array = array(
-							'id_petugas'=>$row->no_petugas,
+							'id_user'=>$row->id_user,
 							'username'=>$row->username,
-							'hak_akses'=>$row->hak_akses,
-							'nama_petugas'=>$row->nama_petugas
+							'akses'=>$row->akses,
+							'nama_user'=>$row->nama_user
 						);
 						
 						$this->session->set_userdata('logged_in', $sess_array );
