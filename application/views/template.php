@@ -70,15 +70,6 @@
 				<!-- start: search & user box -->
 				<div class="header-right">
 			
-					<form action="pages-search-results.html" class="search nav-form">
-						<div class="input-group input-search">
-							<input type="text" class="form-control" name="q" id="q" placeholder="Search...">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-							</span>
-						</div>
-					</form>
-			
 					<span class="separator"></span>
 			
 					
@@ -165,4 +156,24 @@
 				<!-- end: sidebar -->
 
 				<section role="main" class="content-body">
+			
+				<section role="main" class="content-body" style="
+    background-image: -webkit-linear-gradient( 260deg, #74ebd5 0%, #3f2b96 100%);
+">
+					<header class="page-header">
+						<h2>Request Aplication</h2>
 					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home"></i>
+									</a>
+								</li>
+								<li><span>Tables</span></li>
+								<li><span>Advanced</span></li>
+							</ol>
+					
+							<a class="sidebar-right-toggle"></a>
+						</div>
+					</header>
