@@ -14,7 +14,7 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 		$session_data=$this->session->userdata('logged_in');
-	    $nama=$session_data['nama_user'];
+	    // $nama=$session_data['nama_user'];
 	    $this->load->view('daftarP_view');
 	}
 
