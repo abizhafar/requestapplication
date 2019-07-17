@@ -59,7 +59,7 @@
 			<!-- start: header -->
 			<header class="header">
 				<div class="logo-container">
-					<a href="../" class="logo">
+					<a href="<?php echo site_url() ?>/Dashboard" class="logo">
 						<img src="<?php echo base_url() ?>assets/images/LOGOPAL.png" height="35" alt="Porto Admin" />
 					</a>
 					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
@@ -125,23 +125,22 @@
 							<nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
 									<li>
-										<a href="index.html">
+										<a href="<?php echo site_url() ?>/Divisi">
 											<i class="fa fa-home" aria-hidden="true"></i>
 											<span>Divisi</span>
 										</a>
 									</li>
 									<li>
-										<a href="mailbox-folder.html">
-											<span class="pull-right label label-primary">182</span>
-											<i class="fa fa-envelope" aria-hidden="true"></i>
+										<a href="<?php echo site_url() ?>/User">
+											<i class="fa fa-user" aria-hidden="true"></i>
 											<span>User</span>
 										</a>
 									</li>
 									
 									<li>
-										<a href="http://themeforest.net/item/porto-responsive-html5-template/4106987?ref=Okler" target="_blank">
+										<a href="<?php echo site_url() ?>/daftarP" >
 											<i class="fa fa-external-link" aria-hidden="true"></i>
-											<span>Data Request <em class="not-included">(Not Included)</em></span>
+											<span>Data Request</span>
 										</a>
 									</li>
 								</ul>
@@ -157,9 +156,7 @@
 
 				<section role="main" class="content-body">
 			
-				<section role="main" class="content-body" style="
-    background-image: -webkit-linear-gradient( 260deg, #74ebd5 0%, #3f2b96 100%);
-">
+				<section role="main" class="content-body">
 					<header class="page-header">
 						<h2>Request Aplication</h2>
 					
