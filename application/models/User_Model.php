@@ -16,6 +16,18 @@
 				return false;
 			}
 		}
+
+		function get_all_user() 
+  		{
+    		$this->datatables->select('id_user,nama_user,username,password,akses');
+    		$this->datatables->from('user');
+    		$this->datatables->add_column('view',
+    		'<a href="javascript:void(0);" class="edit_record btn btn-warning btn-s" data-id_user="$1" data-nama_user="$2" data-username="$3" data-password="$4" data-akses="$5"><i class="fa fa-edit"></i> &nbsp EDIT </a>
+    		 <a href="javascript:void(0);" class="hapus_record btn btn-danger btn-s" data-id_user="$1"><i class="fas fa-trash"></i> &nbsp HAPUS</a>', 'id_user,nama_user,username,password,akses');
+        
+    		return $this->datatables->generate();
+ 		}
+
 	
 	}
 	
