@@ -119,7 +119,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="mailbox-folder.html">
+										<a href="<?php echo site_url().'/user/index'?>">
 											<span class="pull-right label label-primary">182</span>
 											<i class="fa fa-envelope" aria-hidden="true"></i>
 											<span>User</span>
