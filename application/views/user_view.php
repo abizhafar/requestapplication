@@ -4,11 +4,11 @@
 			
 								<section class="panel">
 									<header class="panel-heading">
-										<h2 class="panel-title">TABEL PETUGAS</h2>
+										<h2 class="panel-title">TABEL USER</h2>
 									</header>
 									<div class="panel-body">
 										<div class="table-responsive">
-											<button class="btn-sm btn-success" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH PETUGAS</button>
+											<button class="btn-md btn-outline-success" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH USER</button>
 										 	<br><br>
 											<table class="table table-hover mb-none" id="mytable">
 												<thead>
@@ -21,53 +21,18 @@
 														<th>Aksi</th>
 													</tr>
 												</thead>
-												<!-- <tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>@mdo</td>
-														<td>wwww</td>
-														<td>1</td>
-														<td class="actions">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>@fat</td>
-														<td>qqqq</td>
-														<td>1</td>
-														<td class="actions">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>@twitter</td>
-														<td>eeeee</td>
-														<td>1</td>
-														<td class="actions">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-												</tbody> -->
 											</table>
 										</div>
 									</div>
 								</section>
 
-<form id="add-row-form" action="<?php echo base_url().'index.php/User/simpan'?>" method="post">
+		<form id="add-row-form" action="<?php echo base_url().'index.php/User/simpan'?>" method="post">
              <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                    <div class="modal-content">
                        <div class="modal-header">
                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                           <h4 class="modal-title" id="myModalLabel">TAMBAH PETUGAS</h4>
+                           <h4 class="modal-title" id="myModalLabel">TAMBAH USER</h4>
                        </div>
                        <div class="alert alert-danger print-error-msg" style="display:none"></div>
                        <div class="alert alert-primary print-success-msg" style="display:none"></div>
@@ -76,7 +41,7 @@
                                <input type="text" id="Nomer_petugas" name="ID" class="form-control" placeholder="Masukkan ID User" required>
                            </div>
                            <div class="form-group">
-                               <input type="text" id="Nama_petugas" name="Nama" class="form-control" placeholder=" Masukkan Nama Petugas" required>
+                               <input type="text" id="Nama_petugas" name="Nama" class="form-control" placeholder=" Masukkan Nama User" required>
                            </div>
                            <div class="form-group">
                                <input type="text" id="Username" name="Username" class="form-control" placeholder="Masukkan Username" required>
@@ -86,8 +51,40 @@
                            </div>
                       </div>
                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
+                          <button type="submit" id="add-row" class="btn btn-success"><i class="glyphicon glyphicon-floppy-save"></i> SIMPAN</button>
+                     </div>
+                  </div>
+              </div>
+           </div>
+       </form>
+
+       <!-- Modal Update Produk-->
+        <form id="add-row-form" action="<?php echo base_url().'index.php/User/update'?>" method="post">
+           <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                         <h4 class="modal-title" id="myModalLabel">UPDATE DATA USER</h4>
+                     </div>
+                     <div class="modal-body">
+                         <div class="form-group">
+                               <input type="text" name="id" class="form-control" placeholder="Masukkan Nomer Petugas" readonly>
+                           </div>
+                           <div class="form-group">
+                               <input type="text" name="Nama" class="form-control" placeholder=" Masukkan Nama User" required>
+                           </div>
+                           <div class="form-group">
+                               <input type="text" name="Username" class="form-control" placeholder="Masukkan Username" required>
+                           </div>
+                           <div class="form-group">
+                               <input type="password" name="Password" class="form-control" placeholder="Masukkan Password" required>
+                           </div>
+                     </div>
+                     <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                          <button type="submit" id="add-row" class="btn btn-info">SIMPAN</button>
+                          <button type="submit" id="add-row" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i> PERBARUI</button>
                      </div>
                   </div>
               </div>
@@ -152,7 +149,7 @@ function delrec() {
                         {"data": "username"},
                         {"data": "password", "visible":false, "searchable":false},
                         {"data": "akses", render : function(data) {
-                                return data == '1' ? 'Petugas' : 'Administrator'},
+                                return data == '1' ? 'Administrator' : 'Administrator'},
                                  className: "text-center"
                         },
                         {"data": "view", "sortable":false},
@@ -180,12 +177,6 @@ function delrec() {
             $('[name="Nama"]').val(Nama);
             $('[name="Username"]').val(Username);
             $('[name="Password"]').val(Password);
-            // $('[name="hak_akses"]').val(hak_akses);
-            // if(akses=="1"){
-            //   $('input[id="radio1"]').prop('checked',true);
-            // }else if(kses=="2"){
-            //   $('input[id="radio2"]').prop('checked',true);
-            // };
             
       });
       // End Edit Records
