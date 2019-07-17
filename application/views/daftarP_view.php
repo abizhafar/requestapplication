@@ -192,6 +192,18 @@ $(document).ready(function() {
             { "data": "", "visible":true,"orderable":false, "searchable": false, "render": function (data, type, row) {
                   return '<a class="" data-toggle="modal" data-no_psa="'+row.no_psa+'" data-nama_user="'+row.nama_user+'" data-no_telp="'+row.no_telp+'" data-divisi="'+row.divisi+'"data-departemen="'+row.departemen+'" data-nama_aplikasi="'+row.nama_aplikasi+'"data-tgl_interview="'+row.tgl_interview+'"data-tgl_digunakan="'+row.tgl_digunakan+'" data-status="'+row.status+'"  data-tgl_proses="'+row.tgl_onproses+'" data-tgl_deploy="'+row.tgl_deploy+'" data-permasalahan="'+row.permasalahan+'" data-fungsi="'+row.fungsi+'" data-pengguna="'+row.pengguna+'" data-input="'+row.input+'" data-proses="'+row.proses+'" data-output="'+row.output+'" data-kebutuhan="'+row.kebutuhan+'" data-target="#ModalUpdate" onclick="delrec()"><i style="font-size:20px" class="icon fa fa-edit"></i></a>'; }
         	}],
+        	 "columnDefs" : [
+		        { targets : [9],
+		          render : function (data, type, row) {
+		            switch(data) {
+		               case '1' : return '<span class="label label-warning">Waiting</span>'; break;
+		               case '2' : return '<span class="label label-primary">On-Process</span>'; break;
+		               case '3' : return '<span class="label label-success">Deployment</span>'; break;
+		               default  : return 'N/A';
+		            }
+		          }
+		        }
+		   ],
         "order": [[1, 'asc']],
 	} );
 

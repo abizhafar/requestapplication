@@ -112,8 +112,8 @@
 				<aside id="sidebar-left" class="sidebar-left">
 				
 					<div class="sidebar-header">
-						<div class="sidebar-title">
-							Navigation
+						<div class="sidebar-title" style="color: #fff">
+							Dashboard
 						</div>
 						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
 							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -133,14 +133,11 @@
 									<li>
 										<a href="<?php echo site_url() ?>/User">
 											<i class="fa fa-user" aria-hidden="true"></i>
-										<a href="<?php echo site_url().'/user/index'?>">
-											<span class="pull-right label label-primary">182</span>
-											<i class="fa fa-envelope" aria-hidden="true"></i>
 											<span>User</span>
 										</a>
 									</li>
 									
-									<li>
+									<li class="nav-active">
 										<a href="<?php echo site_url() ?>/daftarP" >
 											<i class="fa fa-external-link" aria-hidden="true"></i>
 											<span>Data Request</span>
