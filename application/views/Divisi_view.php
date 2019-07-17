@@ -13,7 +13,12 @@
 							</header>
 							<div class="panel-body">
 								<table class="table table-bordered table-striped mb-none" id="datatable-default">
-									<thead>
+									
+										 <div class="card-body card-block">
+          						<button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd" onclick="delrec()">Tambah Divisi</button>
+          					</div>
+          					<br>
+          							<thead>
 										<tr>
 											<th>Kode Divisi</th>
 											<th>Nama Divisi</th>
