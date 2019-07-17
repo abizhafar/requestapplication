@@ -131,8 +131,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="<?php echo site_url() ?>/User">
-											<i class="fa fa-user" aria-hidden="true"></i>
 										<a href="<?php echo site_url().'/user/index'?>">
 											<i class="fa fa-user" aria-hidden="true"></i>
 											<span>User</span>
