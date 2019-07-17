@@ -80,7 +80,10 @@
 								<img src="<?php echo base_url() ?>assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="<?php echo base_url() ?>assets/images/!logged-user.jpg" />
 							</figure>
 							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-								<span class="name">John Doe Junior</span>
+								<?php  
+                                $session_data=$this->session->userdata('logged_in');
+                                ?>
+								<span class="name"><?php echo $akses=$session_data['nama_user'];?></span>
 								<span class="role">administrator</span>
 							</div>
 			
@@ -124,25 +127,51 @@
 						<div class="nano-content">
 							<nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
+								<?php 
+									$url= $this->uri->segment(1);
+									if ($url=="Divisi") {?>
+									<li class="nav-active">
+										<a href="<?php echo site_url() ?>/Divisi">
+											<i class="fa fa-home" aria-hidden="true"></i>
+											<span>Divisi</span>
+										</a>
+									</li>
+								<?php }else{?>
 									<li>
 										<a href="<?php echo site_url() ?>/Divisi">
 											<i class="fa fa-home" aria-hidden="true"></i>
 											<span>Divisi</span>
 										</a>
 									</li>
+								<?php } if ($url=="User") {	?>
+									<li class="nav-active">
+										<a href="<?php echo site_url() ?>/User">
+											<i class="fa fa-user" aria-hidden="true"></i>
+											<span>User</span>
+										</a>
+									</li>
+								<?php } else { ?>
 									<li>
 										<a href="<?php echo site_url() ?>/User">
 											<i class="fa fa-user" aria-hidden="true"></i>
 											<span>User</span>
 										</a>
 									</li>
-									
+								<?php } if ($url=="daftarP") {	?>
 									<li class="nav-active">
 										<a href="<?php echo site_url() ?>/daftarP" >
 											<i class="fa fa-external-link" aria-hidden="true"></i>
 											<span>Data Request</span>
 										</a>
 									</li>
+								<?php } else { ?>
+									<li>
+										<a href="<?php echo site_url() ?>/daftarP" >
+											<i class="fa fa-external-link" aria-hidden="true"></i>
+											<span>Data Request</span>
+										</a>
+									</li>
+								<?php } ?>
 								</ul>
 							</nav>
 				

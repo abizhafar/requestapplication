@@ -117,9 +117,9 @@
 						</section>
 					</div>
 
-					<div class="col-lg-6 col-md-12">
-					<section class="panel">
-						<header class="panel-heading panel-heading-transparent">
+					<div class="col-lg-12 col-md-12">
+					<section class="panel  panel-primary">
+						<header class="panel-heading">
 							<div class="panel-actions">
 								<a href="#" class="fa fa-caret-down"></a>
 								<a href="#" class="fa fa-times"></a>
