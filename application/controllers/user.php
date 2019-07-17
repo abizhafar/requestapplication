@@ -32,13 +32,13 @@ class User extends CI_Controller {
                     'field' => 'id',
                     'label' => 'Nomer Petugas',
                     'rules' => 'trim|required|is_unique[user.id_user]',
-                    'errors'=> array('is_unique' =>'Nomer petugas Telah Terdaftar','required'=>'Nomer Petugas Tidak Boleh Kosong' )
+                    'errors'=> array('is_unique' =>'Nomer User Telah Terdaftar','required'=>'Nomer User Tidak Boleh Kosong' )
             ),
             array(
                     'field' => 'Nama',
                     'label' => 'Nama User',
                     'rules' => 'trim|required',
-                    'errors'=> array('required'=>'Nama Petugas Tidak Boleh Kosong' )
+                    'errors'=> array('required'=>'Nama User Tidak Boleh Kosong' )
             ),
              array(
                     'field' => 'Username',
@@ -73,7 +73,7 @@ class User extends CI_Controller {
       'akses'		 => '1'
     );
     $this->db->insert('user', $data);
-    	echo json_encode(['success'=>'Data Petugas Berhasil Ditambahkan']);
+    	echo json_encode(['success'=>'Data User Berhasil Ditambahkan']);
     redirect('User', 'refresh');
   }}
 	
@@ -87,9 +87,7 @@ class User extends CI_Controller {
       'password'	=> $this->input->post('Password')
     );
     $this->db->where('id_user',$id);
-    $this->db->update('nama_user', $data);
-    $this->db->update('username', $data);
-    $this->db->update('password', $data);
+    $this->db->update('user', $data);
     // $this->db->update('akses', $data);
 
     redirect('user');
@@ -105,7 +103,7 @@ class User extends CI_Controller {
     // }else{
       $this->db->where('id_user',$id);
       $this->db->delete('user');
-      echo json_encode(['success'=>'Data Petugas Berhasil Dihapus']);
+      echo json_encode(['success'=>'Data User Berhasil Dihapus']);
       redirect('User','refresh');
     }
     
