@@ -36,9 +36,21 @@
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme-custom.css">
+		<link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/jquery.dataTables.min.css">
 
 		<!-- Head Libs -->
 		<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.js"></script>
+		<style>
+			td.details-control {
+			    background: url('<?php echo base_url() ?>assets/images/details_open.png') no-repeat center center;
+			    cursor: pointer;
+			}
+			tr.details td.details-control {
+			    background: url('<?php echo base_url() ?>assets/images/details_close.png') no-repeat center center;
+			}
+		</style>
+		
+
 
 	</head>
 	<body>
@@ -95,7 +107,7 @@
 			</header>
 			<!-- end: header -->
 
-			<div class="inner-wrapper">
+			<div class="inner-wrapper" style="background-image: -webkit-linear-gradient( 260deg, #74ebd5 0%, #3f2b96 100%);">
 				<!-- start: sidebar -->
 				<aside id="sidebar-left" class="sidebar-left">
 				
@@ -143,6 +155,8 @@
 				</aside>
 				<!-- end: sidebar -->
 
+				<section role="main" class="content-body">
+			
 				<section role="main" class="content-body" style="
     background-image: -webkit-linear-gradient( 260deg, #74ebd5 0%, #3f2b96 100%);
 ">
