@@ -171,7 +171,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p class="text-muted">© Copyright 2019 PT. PAL INDONESIA - DIVISI TENOLOGI</p>
+          <p class="text-muted">© Copyright 2019 PT. PAL INDONESIA - DIVISI TEKNOLOGI </p> 
         </div>
       </div>
     </div>
