@@ -109,9 +109,9 @@
                                     +buttonHandler
                                     +'" data-hotkey="'
                                     +hotkey
-                                    +'"'
+                                    +'"style="background-color: #12bbad;"'
                                     +buttonToggle
-                                    +'><span class="'
+                                    +'><span style="color: white" class="'
                                     +buttonIcon
                                     +'"></span> '
                                     +this.__localize(btnText)
@@ -214,7 +214,7 @@
       if (this.$editor == null) {
         // Create the panel
         var editorHeader = $('<div/>', {
-                            'class': 'md-header btn-toolbar'
+                            'class': 'md-header btn-toolbar', 'style': 'background-color: aliceblue'
                             })
 
         // Merge the main & additional button groups together
@@ -1175,9 +1175,9 @@
           toggle: true,
           hotkey: 'Ctrl+P',
           title: 'Preview',
-          btnText: 'Preview',
+          btnText: '',
           btnClass: 'btn btn-primary btn-sm',
-          icon: { glyph: 'glyphicon glyphicon-search', fa: 'fa fa-search', 'fa-3': 'icon-search' },
+          icon: { glyph: 'glyphicon glyphicon-eye-open', fa: 'fa fa-eye', 'fa-3': 'fa fa-eye' },
           callback: function(e){
             // Check the preview mode and toggle based on this flag
             var isPreview = e.$isPreview,content
