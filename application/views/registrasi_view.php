@@ -33,7 +33,7 @@
 	<div class="page-content">
 		<div class="form-v1-content">
 			<div class="wizard-form">
-		        <form class="form-register" action="#" method="post">
+		        <form class="form-register" action="<?php echo site_url('Registrasi/simpan') ?>" method="post" id="form">
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
 			            <h2>
