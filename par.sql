@@ -11,7 +11,7 @@
  Target Server Version : 100134
  File Encoding         : 65001
 
- Date: 16/07/2019 09:40:05
+ Date: 18/07/2019 08:56:06
 */
 
 SET NAMES utf8mb4;
@@ -32,8 +32,14 @@ CREATE TABLE `data_request`  (
   `status` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `tgl_onproses` date NULL DEFAULT NULL,
   `tgl_deploy` date NULL DEFAULT NULL,
+  `departemen` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`no_psa`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of data_request
+-- ----------------------------
+INSERT INTO `data_request` VALUES (1, 'Supra', '09986', 'Supply Chain', '2019-07-09', '2019-07-09', 'Pengarsipan Data', '2', '2019-07-31', '2019-07-23', NULL);
 
 -- ----------------------------
 -- Table structure for detail
@@ -49,6 +55,11 @@ CREATE TABLE `detail`  (
   `output` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `kebutuhan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of detail
+-- ----------------------------
+INSERT INTO `detail` VALUES (1, 'gudang arsip penuh', 'pengarsipan data gfsgfdytdcfty6rtfcgfdcttgfdctrddtyhgvgvyftyfcrt5dfcfgxtrdtufjhvyjfytdcxytfjv btfftfv ctyfytrfgfcyr ffyf tyr76rttv nfn  fyntfytfm v ftymh vg', 'sekretaris divisi', 'data scan', 'proses', 'data tabel arsip', 'server');
 
 -- ----------------------------
 -- Table structure for divisi
