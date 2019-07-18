@@ -12,12 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/opensans-font.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 	<!-- Main Style Css -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/styleReg.css"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/steyele.css"/>
     <!-- tanggalan -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css"/>
     <!-- markdown -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
-    <!-- <link rel="stylesheet" href="vendor/bootrap/css/bootstrap.css" /> -->
+    <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" /> -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/csgo/bs-markdown.min.css" />
+    <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootrap/css/bootstrap.css" /> -->
 
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/> -->
 
@@ -48,14 +49,14 @@
 								<div class="form-row">
 									<div class="form-holder">
 										<fieldset>
-											<legend>No. PSA (by DIVTI)</legend>
-											<input type="text" class="form-control" id="psa" name="no_psa" placeholder="No. PSA" required readonly>
+											<legend>Divisi</legend>
+											<input type="text" class="form-control" id="divisi" name="divisi" placeholder="Divisi" required>
 										</fieldset>
 									</div>
 									<div class="form-holder">
 										<fieldset>
-											<legend>Divisi / Departemen</legend>
-											<input type="text" class="form-control" id="divisi" name="divisi" placeholder="Divisi / Departemen" required>
+											<legend>Departemen</legend>
+											<input type="text" class="form-control" id="departemen" name="departemen" placeholder="Departemen" required>
 										</fieldset>
 									</div>
 								</div>
@@ -76,8 +77,8 @@
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<fieldset>
-											<legend>Tanggal Interview User</legend>
-											<input type="text" class="form-control"	data-provide="datepicker" name="tgl_interview" placeholder="00/00/0000">
+											<legend>Nama Aplikasi</legend>
+											<input type="text" class="form-control" name="nama_aplikasi" placeholder="Nama Aplikasi">
 										</fieldset>
 									</div>
 								</div>
@@ -124,7 +125,7 @@
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<fieldset>
-											<legend>Fungsi</legend>
+											<legend>Pengguna</legend>
 											<!-- <textarea id="bootstrap-markdown" name="comment" placeholder="Say something..."></textarea> -->
 											<textarea name="content" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
@@ -178,7 +179,7 @@
 								<div class="form-row">
 			                		<div class="form-holder form-holder-2">
 			                			<input type="radio" class="radio" name="radio1" id="plan-1" value="plan-1">
-			                			<label class="plan-icon plan-1-label" for="plan-1">
+			                			<label class="plan-icon plan-1-label" for="plan-1" style="background-color: #dcdc31;">
 		                					<img src="<?php echo base_url() ?>assets/images/list.png" style="height: 35px" alt="pay-1">
 			                			</label>
 			                			<div class="plan-total">
@@ -186,7 +187,7 @@
 		                					<p class="plan-text">Berarti Aplikasi anda sedang berada dalam waiting list Divisi Teknologi menunggu untuk di proses</p>
 		                				</div>
 			                			<input type="radio" class="radio" name="radio1" id="plan-2" value="plan-2">
-			                			<label class="plan-icon plan-2-label" for="plan-2">
+			                			<label class="plan-icon plan-2-label" for="plan-2" style="background-color: #45dc31">
 			                					<img src="<?php echo base_url() ?>assets/images/process.png" style="height: 40px" alt="pay-1">
 			                			</label>
 			                			<div class="plan-total">
@@ -194,13 +195,15 @@
 		                					<p class="plan-text">Berarti aplikasi anda sedang dalam proses pengerjaan</p>
 		                				</div>
 										<input type="radio" class="radio" name="radio1" id="plan-3" value="plan-3" checked>
-										<label class="plan-icon plan-3-label" for="plan-3">
+										<label class="plan-icon plan-3-label" for="plan-3" style="background-color: #31afdc">
 		                					<img src="<?php echo base_url() ?>assets/images/finish.png" style="height: 40px" alt="pay-2">
 										</label>
 										<div class="plan-total">
 		                					<span class="plan-title">Finish</span>
 		                					<p class="plan-text">Berarti aplikasi anda sudah selesai dalam proses pengerjaan dan siap untuk digunakan</p>
 		                				</div>
+		                				<p style="font-size: 25px; color: red">Peringatan!</p>
+		                				<p style="color: red">Pastikan data yang anda isi sudah benar. Jika terjadi kesalahan dalam pengisian data dapat langsung melapor ke Divisi Teknologi dengan menunjukan Nomor PSA</p>
 			                		</div>
 			                	</div>
 							</div>
@@ -210,8 +213,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-	<!-- <link rel="stylesheet" href="vendor/bootrap/js/bootstrap.js" /> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- <script src="<?php echo base_url() ?>assets/vendor/bootrap/js/bootstrap.js"></script> -->
 	<script src="<?php echo base_url() ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/jquery.steps.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/main.js"></script>

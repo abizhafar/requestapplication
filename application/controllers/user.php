@@ -84,7 +84,7 @@ class User extends CI_Controller {
       'id_user'     => $this->input->post('id'),
       'nama_user'   => $this->input->post('Nama'),
       'username'    => $this->input->post('Username'),
-      'password'	=> $this->input->post('Password')
+      'password'	  => $this->input->post('Password')
     );
     $this->db->where('id_user',$id);
     $this->db->update('user', $data);
