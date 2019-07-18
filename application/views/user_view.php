@@ -117,7 +117,7 @@
                      <h4 class="modal-title" id="myModalLabel">Hapus User</h4>
                  </div>
                  <div class="modal-body">
-                         <input type="button" id="del-user" name="Nomer" class="form-control" placeholder="Nomer Petugas" required>
+                         <input type="hidden" id="del-user" name="id" class="form-control" placeholder="Nomer Petugas" required>
                          <strong>Anda yakin ingin menghapus record ini?</strong>
                  </div>
                  <div class="modal-footer">
