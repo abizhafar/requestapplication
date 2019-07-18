@@ -28,7 +28,7 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#register">Register Permintaan Aplikasi</a>
+            <a class="nav-link" href="<?php echo site_url('') ?>/Registrasi">Register Permintaan Aplikasi</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link" href="#cek">Cek Status Aplikasi</a>
@@ -46,7 +46,7 @@
           <h2 class="text-capitalize w-100" style=""><b>WELCOME</b></h2>
           <h3 class="display-3">Form Application Request</h3>
           <h3 style="" class=""><b>DIVISI TEKNOLOGI PT. PAL INDONESIA</b></h3>
-          <a href="#register" class="btn btn-lg mt-4 btn-outline-light">Daftarkan Permintaan Aplikasi</a>
+          <a href="<?php echo site_url('') ?>/Registrasi" class="btn btn-lg mt-4 btn-outline-light">Daftarkan Permintaan Aplikasi</a>
         </div>
       </div>
     </div>
@@ -71,15 +71,10 @@
         </div>
       </div>
       <div class="row">
-      <div class="col-md-6" style="display: none" id="table">
+      <div class="col-md-12" style="display: none" id="table">
                 <section class="panel">
-                  <header class="panel-heading">
-                    <div class="panel-actions">
-                      <a href="#" class="fa fa-caret-down"></a>
-                      <a href="#" class="fa fa-times"></a>
-                    </div>
-            
-                    <h2 class="panel-title">Condensed</h2>
+                  <header class="panel-heading">            
+                    <h2 class="panel-title">Status Permintaan Aplikasi</h2>
                   </header>
                   <div class="panel-body">
                     <div class="table-responsive">
@@ -98,48 +93,6 @@
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
                           </tr>
                         </tbody>
                       </table>
@@ -171,7 +124,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p class="text-muted">© Copyright 2019 PT. PAL INDONESIA - DIVISI TENOLOGI</p>
+          <p class="text-muted">© Copyright 2019 PT. PAL INDONESIA - DIVISI TEKNOLOGI </p> 
         </div>
       </div>
     </div>
