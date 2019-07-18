@@ -1,5 +1,21 @@
 <?php $this->view('template.php'); ?>
 			
+					<header class="page-header">
+						<h2>Request Aplication</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="<?php echo site_url(). '/Dashboard' ?>">
+										<i class="fa fa-home"></i>
+									</a>
+								</li>
+								<li><span>Data User</span></li>
+							</ol>
+					
+							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+						</div>
+					</header>
 
 			
 								<section class="panel">
@@ -26,7 +42,7 @@
 									</div>
 								</section>
 
-		<form id="add-row-form" action="<?php echo base_url().'index.php/User/simpan'?>" method="post">
+		<form id="add-row-form" action="<?php echo base_url().'index.php/user/simpan'?>" method="post">
              <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                    <div class="modal-content">
@@ -83,13 +99,35 @@
                            </div>
                      </div>
                      <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
                           <button type="submit" id="add-row" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i> PERBARUI</button>
                      </div>
                   </div>
               </div>
            </div>
        </form>
+		
+		<!-- Modul hapus data -->
+       <form id="dell-row-form" action="<?php echo site_url().'/user/delete'?>" method="post">
+       <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     <h4 class="modal-title" id="myModalLabel">Hapus User</h4>
+                 </div>
+                 <div class="modal-body">
+                         <input type="button" id="del-user" name="Nomer" class="form-control" placeholder="Nomer Petugas" required>
+                         <strong>Anda yakin ingin menghapus record ini?</strong>
+                 </div>
+                 <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
+                      <button type="submit" id="dell-row" class="btn btn-danger"><i class="glyphicon glyphicon-remove-sign"></i> HAPUS</button>
+                 </div>
+              </div>
+          </div>
+        </div>
+      </form>
 						
 					<!-- end: page -->
 <?php $this->view('footer.php'); ?>
@@ -212,7 +250,7 @@ function delrec() {
                     $(".print-success-msg").html(data.success);
                     $(".print-error-msg").css('display','none');
 
-                    location.replace("<?php echo site_url() ?>/User");
+                    location.replace("<?php echo site_url() ?>/user");
                   }else{
                     $(".print-error-msg").css('display','block');
                     $(".print-error-msg").html(data.error);
@@ -229,7 +267,7 @@ function delrec() {
         e.preventDefault();
         var id_user = $("input[id='del-user']").val();
           $.ajax({
-              url: "<?php echo site_url() ?>/User/delete",
+              url: "<?php echo site_url() ?>/user/delete",
               type:'POST',
               dataType: "json",
               data: {id:id_user},
@@ -241,11 +279,12 @@ function delrec() {
                     $(".print-error-msg").css('display','none');
 
                     location.replace("<?php echo site_url() ?>/user");
-                  }else{
-                    $(".print-error-msg").css('display','none');
-                    alert(data.error);
-                    // $(".print-error-msg").html(data.error);
                   }
+                  // else{
+                  //   $(".print-error-msg").css('display','none');
+                  //   alert(data.error);
+                  //   // $(".print-error-msg").html(data.error);
+                  // }
               }
           });
       }); 
