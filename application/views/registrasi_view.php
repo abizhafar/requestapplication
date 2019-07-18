@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/steyele.css"/>
     <!-- tanggalan -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css"/>
+    <!-- CSS dependencies -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/aquamarine.css">
+    <!-- Script: Make my navbar transparent when the document is scrolled to top -->
+    <script src="<?php echo base_url() ?>assets/javascripts/navbar-ontop.js"></script>
+    <!-- Script: Animated entrance -->
+    <script src="<?php echo base_url() ?>assets/javascripts/animate-in.js"></script>
     <!-- markdown -->
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" /> -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/csgo/bs-markdown.min.css" />
@@ -30,10 +36,25 @@
     
 </head>
 <body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+		<div class="container">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+			<div class="collapse navbar-collapse justify-content-center" id="navbar2SupportedContent">
+				<a class="navbar-brand" href="#" contenteditable="true" ><img width="120px" src="<?php echo base_url() ?>assets/images/logopal.png" alt=""></a>
+				<ul class="navbar-nav">
+					<li class="nav-item mx-2">
+						<a class="nav-link" href="<?php echo site_url() ?>/Home">Home</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
 	<div class="page-content">
 		<div class="form-v1-content">
 			<div class="wizard-form">
-		        <form class="form-register" action="#" method="post">
+		        <form class="form-register" action="<?php echo site_url('Registrasi/simpan') ?>" method="post" id="form">
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
 			            <h2>

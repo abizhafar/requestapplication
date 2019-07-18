@@ -17,24 +17,20 @@
 						</div>
 					</header>
 					<div class="col-md-12 col-lg-6 col-xl-6">
-						<section class="panel panel-featured-left panel-featured-primary">
+						<section class="panel panel-featured-left panel-featured-warning">
 							<div class="panel-body">
 								<div class="widget-summary">
 									<div class="widget-summary-col widget-summary-col-icon">
-										<div class="summary-icon bg-primary">
-											<i class="fa fa-life-ring"></i>
+										<div class="summary-icon bg-warning">
+											<i class="fa fa-clock-o"></i>
 										</div>
 									</div>
 									<div class="widget-summary-col">
 										<div class="summary">
-											<h4 class="title">Support Questions</h4>
-											<div class="info">
+											<h4 class="title">Status Project Waiting</h4>
+											<div class="warning">
 												<strong class="amount">1281</strong>
-												<span class="text-primary">(14 unread)</span>
 											</div>
-										</div>
-										<div class="summary-footer">
-											<a class="text-muted text-uppercase">(view all)</a>
 										</div>
 									</div>
 								</div>
@@ -47,19 +43,15 @@
 								<div class="widget-summary">
 									<div class="widget-summary-col widget-summary-col-icon">
 										<div class="summary-icon bg-primary">
-											<i class="fa fa-life-ring"></i>
+											<i class="fa fa-cogs"></i>
 										</div>
 									</div>
 									<div class="widget-summary-col">
 										<div class="summary">
-											<h4 class="title">Support Questions</h4>
+											<h4 class="title">Status Project On-Progress</h4>
 											<div class="info">
 												<strong class="amount">1281</strong>
-												<span class="text-primary">(14 unread)</span>
 											</div>
-										</div>
-										<div class="summary-footer">
-											<a class="text-muted text-uppercase">(view all)</a>
 										</div>
 									</div>
 								</div>
@@ -67,24 +59,20 @@
 						</section>
 					</div>
 					<div class="col-md-12 col-lg-6 col-xl-6">
-						<section class="panel panel-featured-left panel-featured-primary">
+						<section class="panel panel-featured-left panel-featured-info">
 							<div class="panel-body">
 								<div class="widget-summary">
 									<div class="widget-summary-col widget-summary-col-icon">
-										<div class="summary-icon bg-primary">
-											<i class="fa fa-life-ring"></i>
+										<div class="summary-icon bg-info">
+											<i class="fa fa-bug"></i>
 										</div>
 									</div>
 									<div class="widget-summary-col">
 										<div class="summary">
-											<h4 class="title">Support Questions</h4>
+											<h4 class="title">Status Project Testing</h4>
 											<div class="info">
 												<strong class="amount">1281</strong>
-												<span class="text-primary">(14 unread)</span>
 											</div>
-										</div>
-										<div class="summary-footer">
-											<a class="text-muted text-uppercase">(view all)</a>
 										</div>
 									</div>
 								</div>
@@ -92,24 +80,20 @@
 						</section>
 					</div>
 					<div class="col-md-12 col-lg-6 col-xl-6">
-						<section class="panel panel-featured-left panel-featured-primary">
+						<section class="panel panel-featured-left panel-featured-success">
 							<div class="panel-body">
 								<div class="widget-summary">
 									<div class="widget-summary-col widget-summary-col-icon">
-										<div class="summary-icon bg-primary">
-											<i class="fa fa-life-ring"></i>
+										<div class="summary-icon bg-success">
+											<i class="fa fa-check"></i>
 										</div>
 									</div>
 									<div class="widget-summary-col">
 										<div class="summary">
-											<h4 class="title">Support Questions</h4>
+											<h4 class="title">Status Project Deploy</h4>
 											<div class="info">
 												<strong class="amount">1281</strong>
-												<span class="text-primary">(14 unread)</span>
 											</div>
-										</div>
-										<div class="summary-footer">
-											<a class="text-muted text-uppercase">(view all)</a>
 										</div>
 									</div>
 								</div>
@@ -128,7 +112,7 @@
 							<h2 class="panel-title">Projects Stats</h2>
 						</header>
 						<div class="panel-body">
-								<table id="example" class="table table-striped mb-none" >
+								<table id="example" class="display" >
 									<thead>
 										<tr>
 											<th>No. PSA</th>
@@ -136,6 +120,13 @@
 											<th>Status</th>
 										</tr>
 									</thead>
+									<tfoot>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tfoot>
 								</table>
 							</div>
 					</section>

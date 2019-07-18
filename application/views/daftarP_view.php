@@ -127,7 +127,7 @@ function format ( d ) {
     return '<table cellpadding="10" cellspacing="0" border="0" style="padding-left:50px;">'+
     	'<tr>'+
             '<td><b>Tanggal Onproses</b></td>'+
-            '<td>'+d.tgl_onproses+'f</td>'+
+            '<td>'+d.tgl_onproses+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td><b>Tanggal Deploy</b></td>'+
