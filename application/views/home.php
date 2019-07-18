@@ -14,6 +14,49 @@
   <script src="<?php echo base_url() ?>assets/javascripts/navbar-ontop.js"></script>
   <!-- Script: Animated entrance -->
   <script src="<?php echo base_url() ?>assets/javascripts/animate-in.js"></script>
+
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body class="text-center">
@@ -34,7 +77,7 @@
             <a class="nav-link" href="#cek">Cek Status Aplikasi</a>
           </li>
         </ul>
-        <a class="btn navbar-btn mx-2 text-white btn-outline-light" href="#login">Login<br></a>
+        <a class="btn navbar-btn mx-2 text-white btn-outline-light" id="myBtn" >Login<br></a>
       </div>
     </div>
   </nav>
@@ -100,28 +143,35 @@
                   </div>
                 </section>
               </div>
+
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content col-lg-4">
+                  <span class="close">&times;</span>
+                    <div class="col-lg-6 col-md-12" style="max-width: 100% !important;">
+                      <h3>Login Admin</h3>
+                         <?php echo form_open('Home/CekLogin'); ?>
+                                <?php echo validation_errors(); ?>
+                        <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Username</label>
+                          <div class="col-10">
+                            <input type="text" class="form-control" name="username" id="inputmailh" placeholder="mail@example.com"> 
+                          </div>
+                        </div>
+                        <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label">Password</label>
+                          <div class="col-10">
+                            <input type="password" class="form-control" name="password" id="inputpasswordh" placeholder="Password"> 
+                          </div>
+                        </div>
+                        <button type="submit" class="btn mt-1 btn-outline-light col-lg-12">Login</button>
+                    </div>
+                  </div>
+              </div>
       </div>
     </div>
   </div>
   <footer class="text-md-left text-center p-4 bg-dark text-light" id="login" style="">
     <div class="container">
-      <div class="row w-100">
-        <div class="col-lg-6 col-md-12 my-4 mx-5 w-100" style="">
-          <h3>Login Admin</h3>
-             <?php echo form_open('Home/CekLogin'); ?>
-                    <?php echo validation_errors(); ?>
-            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Username</label>
-              <div class="col-10">
-                <input type="text" class="form-control" name="username" id="inputmailh" placeholder="mail@example.com"> </div>
-            </div>
-            <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label">Password</label>
-              <div class="col-10">
-                <input type="password" class="form-control" name="password" id="inputpasswordh" placeholder="Password"> </div>
-            </div>
-            <button type="submit" class="btn mt-1 btn-outline-light col-lg-12">Login</button>
-          </form>
-        </div>
-      </div>
+      
       <div class="row">
         <div class="col-md-12">
           <p class="text-muted">© Copyright 2019 PT. PAL INDONESIA - DIVISI TEKNOLOGI </p> 
@@ -143,3 +193,30 @@
 </body>
 
 </html>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

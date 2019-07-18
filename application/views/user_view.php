@@ -24,7 +24,7 @@
 									</header>
 									<div class="panel-body">
 										<div class="table-responsive">
-											<button class="btn-md btn-outline-success" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH USER</button>
+											<button class="btn navbar-btn mx-auto text-white btn-outline-light" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH USER</button>
 										 	<br><br>
 											<table class="table table-hover mb-none" id="mytable">
 												<thead>

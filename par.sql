@@ -11,7 +11,7 @@
  Target Server Version : 100134
  File Encoding         : 65001
 
- Date: 18/07/2019 08:56:06
+ Date: 18/07/2019 14:55:41
 */
 
 SET NAMES utf8mb4;
@@ -39,7 +39,7 @@ CREATE TABLE `data_request`  (
 -- ----------------------------
 -- Records of data_request
 -- ----------------------------
-INSERT INTO `data_request` VALUES (1, 'Supra', '09986', 'Supply Chain', '2019-07-09', '2019-07-09', 'Pengarsipan Data', '2', '2019-07-31', '2019-07-23', NULL);
+INSERT INTO `data_request` VALUES (1030562019, 'Supra', '09986', 'Supply Chain', '2019-07-09', '2019-07-09', 'Pengarsipan Data', '2', '2019-07-31', '2019-07-23', NULL);
 
 -- ----------------------------
 -- Table structure for detail
@@ -59,17 +59,41 @@ CREATE TABLE `detail`  (
 -- ----------------------------
 -- Records of detail
 -- ----------------------------
-INSERT INTO `detail` VALUES (1, 'gudang arsip penuh', 'pengarsipan data gfsgfdytdcfty6rtfcgfdcttgfdctrddtyhgvgvyftyfcrt5dfcfgxtrdtufjhvyjfytdcxytfjv btfftfv ctyfytrfgfcyr ffyf tyr76rttv nfn  fyntfytfm v ftymh vg', 'sekretaris divisi', 'data scan', 'proses', 'data tabel arsip', 'server');
+INSERT INTO `detail` VALUES (1030562019, 'gudang arsip penuh', 'pengarsipan data gfsgfdytdcfty6rtfcgfdcttgfdctrddtyhgvgvyftyfcrt5dfcfgxtrdtufjhvyjfytdcxytfjv btfftfv ctyfytrfgfcyr ffyf tyr76rttv nfn  fyntfytfm v ftymh vg', 'sekretaris divisi', 'data scan', 'proses', 'data tabel arsip', 'server');
 
 -- ----------------------------
 -- Table structure for divisi
 -- ----------------------------
 DROP TABLE IF EXISTS `divisi`;
 CREATE TABLE `divisi`  (
-  `kd_divisi` int(50) NOT NULL,
-  `nama_divisi` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`kd_divisi`) USING BTREE
+  `id_divisi` int(50) NOT NULL,
+  `divisi` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id_divisi`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of divisi
+-- ----------------------------
+INSERT INTO `divisi` VALUES (11000, 'Sekertaris Perusahaan');
+INSERT INTO `divisi` VALUES (12000, 'Satuan Pengawasan Intern');
+INSERT INTO `divisi` VALUES (13000, 'Divisi Perancanaan Strategis Perusahaan');
+INSERT INTO `divisi` VALUES (14000, 'Divisi Keamanan & K3LH');
+INSERT INTO `divisi` VALUES (21000, 'Divisi Desain');
+INSERT INTO `divisi` VALUES (22000, 'Divisi Kapal Niaga');
+INSERT INTO `divisi` VALUES (23000, 'Divisi Kapal Perang');
+INSERT INTO `divisi` VALUES (24000, 'Divisi Kapal Selam');
+INSERT INTO `divisi` VALUES (25000, 'Divisi Pemasaran & Penjualan Kapal');
+INSERT INTO `divisi` VALUES (31000, 'Divisi Rekayasa Umum');
+INSERT INTO `divisi` VALUES (32000, 'Divisi Pemeliharaan & Perbaikan');
+INSERT INTO `divisi` VALUES (33000, 'Divisi Penjualan Rekumhar');
+INSERT INTO `divisi` VALUES (34000, 'Divisi Jaminan Kualitas');
+INSERT INTO `divisi` VALUES (35000, 'Divisi Supply Chain');
+INSERT INTO `divisi` VALUES (41000, 'Divisi Perbendaharaan');
+INSERT INTO `divisi` VALUES (42000, 'Divisi Akuntansi');
+INSERT INTO `divisi` VALUES (43000, 'Divisi Teknologi Informasi');
+INSERT INTO `divisi` VALUES (51000, 'Divisi HCM & Command Media');
+INSERT INTO `divisi` VALUES (52000, 'Divisi Kawasan');
+INSERT INTO `divisi` VALUES (61000, 'Divisi Naval Technology');
 
 -- ----------------------------
 -- Table structure for saran_evaluasi
