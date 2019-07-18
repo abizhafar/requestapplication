@@ -77,7 +77,7 @@
           var z,
               buttons = btnGroups[y].data,
               btnGroupContainer = $('<div/>', {
-                                    'class': 'btn-group'
+                                    'class': 'btn-group', 'style': 'padding: 1px 3px 1px 3px'
                                   })
 
           for (z=0;z<buttons.length;z++) {
@@ -1047,7 +1047,7 @@
           name: 'cmdListO',
           hotkey: 'Ctrl+O',
           title: 'Ordered List',
-          icon: { glyph: 'glyphicon glyphicon-th-list', fa: 'fa fa-list-ol', 'fa-3': 'icon-list-ol' },
+          icon: { glyph: 'glyphicon glyphicon-th-list', fa: 'fa fa-list-ol', 'fa-3': 'fa fa-list-ol' },
           callback: function(e) {
 
             // Prepend/Give - surround the selection

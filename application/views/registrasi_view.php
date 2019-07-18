@@ -11,12 +11,13 @@
 	<!-- Font-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/opensans-font.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.css" />
 	<!-- Main Style Css -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/steyele.css"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/stail.css"/>
     <!-- tanggalan -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css"/>
     <!-- CSS dependencies -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/aquamarine.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/nav.css">
     <!-- Script: Make my navbar transparent when the document is scrolled to top -->
     <script src="<?php echo base_url() ?>assets/javascripts/navbar-ontop.js"></script>
     <!-- Script: Animated entrance -->
@@ -24,6 +25,7 @@
     <!-- markdown -->
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" /> -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/csgo/bs-markdown.min.css" />
+    <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootrap/css/gaemark.css" /> -->
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootrap/css/bootstrap.css" /> -->
 
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/> -->
@@ -42,11 +44,11 @@
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<div class="collapse navbar-collapse justify-content-center" id="navbar2SupportedContent">
 				<a class="navbar-brand" href="<?php echo site_url() ?>/Home"><img width="120px" src="<?php echo base_url() ?>assets/images/logopal.png" alt=""></a>
-				<ul class="navbar-nav">
+				<!-- <ul class="navbar-nav">
 					<li class="nav-item mx-2">
 						<a class="nav-link" href="<?php echo site_url() ?>/Home">Home</a>
 					</li>
-				</ul>
+				</ul> -->
 				
 			</div>
 		</div>
@@ -71,13 +73,13 @@
 									<div class="form-holder">
 										<fieldset>
 											<legend>Divisi</legend>
-											<input type="text" class="form-control" id="divisi" name="divisi" placeholder="Divisi" required>
+											<input type="text" class="form-control" id="divisi" name="divisi" placeholder="Nama Divisi" required>
 										</fieldset>
 									</div>
 									<div class="form-holder">
 										<fieldset>
 											<legend>Departemen</legend>
-											<input type="text" class="form-control" id="departemen" name="departemen" placeholder="Departemen" required>
+											<input type="text" class="form-control" id="departemen" name="departemen" placeholder="Nama Departemen" required>
 										</fieldset>
 									</div>
 								</div>
@@ -234,7 +236,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 	<!-- <script src="<?php echo base_url() ?>assets/vendor/bootrap/js/bootstrap.js"></script> -->
 	<script src="<?php echo base_url() ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/jquery.steps.js"></script>
@@ -244,7 +246,7 @@
 	<!-- markdown -->
 	<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/markdown.js"></script>
 	<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
-	<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+	<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/bs-md.js"></script>
 
 	
 
