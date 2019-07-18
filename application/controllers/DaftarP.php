@@ -8,6 +8,9 @@ class DaftarP extends CI_Controller {
 		parent::__construct();
 		// $this->load->model('Request_Model');
 		$this->load->library('ssp');
+		 if (!$this->session->userdata('logged_in')) {
+	      redirect('Home','refresh');
+	    }
 
 	}
 	public function index()

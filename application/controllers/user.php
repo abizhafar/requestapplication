@@ -8,9 +8,9 @@ class User extends CI_Controller {
     	parent::__construct();
     	$this->load->library('Datatables');
     	$this->load->model('User_Model');
-   //  		$this->load->model('Menus');
-   //  		if (!$this->session->userdata('logged_in')) {
-			// redirect('login','refresh');
+    		if (!$this->session->userdata('logged_in')) {
+    			redirect('home','refresh');
+        }
 	}
 
 	public function index()

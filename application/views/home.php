@@ -71,36 +71,82 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <div class="table-responsive" id="mytable" style="display: none;">
-            <table class="table table-bordered ">
-              <thead class="thead-dark">
-                <tr>
-                  <th>#</th>
-                  <th>First</th>
-                  <th>Last</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                </tr>
-                <tr>
-                  <th>2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <div class="col-md-6" style="display: none" id="table">
+                <section class="panel">
+                  <header class="panel-heading">
+                    <div class="panel-actions">
+                      <a href="#" class="fa fa-caret-down"></a>
+                      <a href="#" class="fa fa-times"></a>
+                    </div>
+            
+                    <h2 class="panel-title">Condensed</h2>
+                  </header>
+                  <div class="panel-body">
+                    <div class="table-responsive">
+                      <table class="table table-condensed mb-none">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+              </div>
       </div>
     </div>
   </div>
@@ -138,7 +184,7 @@
   <script src="<?php echo base_url() ?>assets/javascripts/smooth-scroll.js" style=""></script>
   <script>
     function myFunction() {
-      document.getElementById("mytable").style.display = "block";
+      document.getElementById("table").style.display = "block";
     }
   </script>
 </body>
