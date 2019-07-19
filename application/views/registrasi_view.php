@@ -34,6 +34,10 @@
     <!-- <link data-require="fontawesome@4.1.0" data-semver="4.1.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" /> -->
     <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/toopay/bootstrap-markdown/master/css/bootstrap-markdown.min.css" /> -->
     <!-- <link rel="stylesheet" href="markdown/style.css" /> -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+
+
 
     
 </head>
@@ -238,7 +242,9 @@
 	</div>
 	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 	<!-- <script src="<?php echo base_url() ?>assets/vendor/bootrap/js/bootstrap.js"></script> -->
-	<script src="<?php echo base_url() ?>assets/js/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+	<!-- <script src="<?php echo base_url() ?>assets/js/jquery-3.3.1.min.js"></script> -->
 	<script src="<?php echo base_url() ?>assets/js/jquery.steps.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/main.js"></script>
 	<!-- tanggal -->
@@ -248,7 +254,24 @@
 	<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
 	<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/bs-md.js"></script>
 
-	
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+<script type="text/javascript">
+	
+ jQuery( function() {
+    var availableTags = [
+     	<?php 
+			foreach ($divisi as $key) {
+				echo '"'.$key->divisi.'",';
+			}
+
+		 ?>
+	];
+    jQuery( "#divisi" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+</body>
 </html>

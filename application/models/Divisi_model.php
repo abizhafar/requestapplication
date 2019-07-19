@@ -13,6 +13,11 @@ class Divisi_model extends CI_Model{
     return $this->datatables->generate();
   }
 
+  function get_divisi()
+  {
+    $get=$this->db->get('divisi');
+    return $get->result();
+  }
 }
 
    

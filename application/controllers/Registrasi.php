@@ -3,9 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Registrasi extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		
+		$this->load->model('Divisi_model');
+	}
+
 	public function index()
 	{
-		$this->load->view('registrasi_view');
+		$data['divisi']=$this->Divisi_model->get_divisi();
+		$this->load->view('registrasi_view',$data);
 	}
 
 }

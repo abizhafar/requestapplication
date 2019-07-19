@@ -147,23 +147,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
               <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content col-lg-4">
-                  <span class="close">&times;</span>
-                    <div class="col-lg-6 col-md-12" style="max-width: 100% !important;">
-                      <h3>Login Admin</h3>
-                         <?php echo form_open('Home/CekLogin'); ?>
-                                <?php echo validation_errors(); ?>
-                        <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Username</label>
-                          <div class="col-10">
-                            <input type="text" class="form-control" name="username" id="inputmailh" placeholder="mail@example.com"> 
-                          </div>
-                        </div>
-                        <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label">Password</label>
-                          <div class="col-10">
-                            <input type="password" class="form-control" name="password" id="inputpasswordh" placeholder="Password"> 
-                          </div>
-                        </div>
-                        <button type="submit" class="btn mt-1 btn-outline-light col-lg-12">Login</button>
+                  <span class="close pull-right" style="margin-left: inherit;">&times;</span>
+                  <div class="row">
+                    <div class="mx-auto col-md-6 col-10 bg-white">
+                      <h1 class="mb-4">Log in</h1>
+                       <?php echo form_open('Home/CekLogin'); ?>
+                       <?php echo validation_errors(); ?>
+                        <div class="form-group"> <input type="text" class="form-control" placeholder="Enter username" required="true" name="username"> </div>
+                        <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" required="true" name="password"> <small class="form-text text-muted text-right">
+                          </small> </div> <button type="Login" class="btn btn-primary">Submit</button>
+                      </form>
                     </div>
+                  </div>
                   </div>
               </div>
       </div>
