@@ -38,6 +38,9 @@
 		<link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme-custom.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/jquery.dataTables.min.css">
 
+		<!-- Link editor textarea -->
+		<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
+
 		<!-- Head Libs -->
 		<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.js"></script>
 		<style>
