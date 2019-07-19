@@ -6,7 +6,7 @@
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
 								<li>
-									<a href="index.html">
+									<a href="<?php echo site_url() ?>/dashboard">
 										<i class="fa fa-home"></i>
 									</a>
 								</li>
@@ -18,12 +18,7 @@
 					</header>
 
 						<section class="panel">
-							<header class="panel-heading">
-								<div class="panel-actions">
-									<a href="#" class="fa fa-caret-down"></a>
-									<a href="#" class="fa fa-times"></a>
-								</div>
-						
+							<header class="panel-heading">						
 								<h2 class="panel-title">Daftar permintaan</h2>
 							</header>
 							<div class="panel-body">

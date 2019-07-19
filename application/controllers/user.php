@@ -52,12 +52,6 @@ class User extends CI_Controller {
                     'rules' => 'trim|required',
                     'errors'=> array('required'=>'Password Tidak Boleh Kosong' )
             ),
-            // array(
-            //         'field' => 'hak_akses',
-            //         'label' => 'hak_akses',
-            //         'rules' => 'trim|required',
-            //         'errors'=> array('required'=>'Hak Akses Tidak Boleh Kosong' )
-            // )
     );
     
   	$this->form_validation->set_rules($config);
