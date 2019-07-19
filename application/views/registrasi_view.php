@@ -113,7 +113,7 @@
 									<div class="form-holder form-holder-2">
 										<fieldset>
 											<legend>Tanggal Rencana Digunakan</legend>
-											<input placeholder="00/00/0000" type="text" class="form-control" name="tgl_interview" data-provide="datepicker">
+											<input placeholder="00/00/0000" type="text" class="form-control" name="tgl_digunakan" data-provide="datepicker">
 										</fieldset>
 									</div>
 								</div>
@@ -136,7 +136,7 @@
 										<fieldset>
 											<legend>Permasalahan</legend>
 											<!-- <textarea id="bootstrap-markdown" name="comment" placeholder="Say something..."></textarea> -->
-											<textarea name="content" data-provide="markdown" rows="10"></textarea>
+											<textarea name="permasalahan" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
 									</div>
 								</div>
@@ -145,7 +145,7 @@
 										<fieldset>
 											<legend>Fungsi & Kegunaan</legend>
 											<!-- <textarea id="bootstrap-markdown" name="comment" placeholder="Say something..."></textarea> -->
-											<textarea name="content" data-provide="markdown" rows="10"></textarea>
+											<textarea name="fungsi" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
 									</div>
 								</div>	
@@ -154,7 +154,7 @@
 										<fieldset>
 											<legend>Pengguna</legend>
 											<!-- <textarea id="bootstrap-markdown" name="comment" placeholder="Say something..."></textarea> -->
-											<textarea name="content" data-provide="markdown" rows="10"></textarea>
+											<textarea name="pengguna" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
 									</div>
 								</div>
@@ -162,7 +162,7 @@
 									<div class="form-holder form-holder-2">
 										<fieldset>
 											<legend>Inputing</legend>
-											<textarea name="content" data-provide="markdown" rows="10"></textarea>
+											<textarea name="input" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
 									</div>
 								</div>
@@ -170,7 +170,7 @@
 									<div class="form-holder form-holder-2">
 										<fieldset>
 											<legend>Proses-proses</legend>
-											<textarea name="content" data-provide="markdown" rows="10"></textarea>
+											<textarea name="proses" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
 									</div>
 								</div>
@@ -178,7 +178,7 @@
 									<div class="form-holder form-holder-2">
 										<fieldset>
 											<legend>Output</legend>
-											<textarea name="content" data-provide="markdown" rows="10"></textarea>
+											<textarea name="output" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
 									</div>
 								</div>
@@ -186,7 +186,7 @@
 									<div class="form-holder form-holder-2">
 										<fieldset>
 											<legend>Kebutuhan Komputer dan Peripheral</legend>
-											<textarea name="content" data-provide="markdown" rows="10"></textarea>
+											<textarea name="kebutuhan" data-provide="markdown" rows="10"></textarea>
 										</fieldset>
 									</div>
 								</div>

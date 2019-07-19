@@ -23,10 +23,8 @@
 										<h2 class="panel-title">TABEL USER</h2>
 									</header>
 									<div class="panel-body">
-										<div class="table-responsive">
 											<button class="btn navbar-btn mx-auto text-white btn-outline-light" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH USER</button>
-										 	<br><br>
-											<table class="table table-hover mb-none" id="mytable">
+									<table class="display" id="mytable" style="width:100%">
 												<thead>
 													<tr>
 														<th>ID</th>
@@ -38,7 +36,6 @@
 													</tr>
 												</thead>
 											</table>
-										</div>
 									</div>
 								</section>
 
@@ -132,24 +129,8 @@
 					<!-- end: page -->
 <?php $this->view('footer.php'); ?>
 
-<script src="<?php echo base_url().'assets/js/jquery-2.1.4.min.js'?>"></script>
-<script src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
-<script src="<?php echo base_url().'assets/js/jquery.datatables.min.js'?>"></script>
-<script src="<?php echo base_url().'assets/js/dataTables.bootstrap.js'?>"></script>
-<!-- Specific Page Vendor -->
-<script src="<?php echo base_url()?>assets/jquery-datatables/media/js/jquery.dataTables.js"></script>
-<script src="<?php echo base_url()?>assets/jquery-datatables-bs3/assets/js/datatables.js"></script>
-
-<!-- Examples -->
-<script src="<?php echo base_url()?>assets/javascripts/tables/examples.datatables.editable.js"></script>
 
 <!-- gawe reset record he -->
-<script>
-function delrec() {
-  document.getElementById("add-row-form").reset();
-}
-</script>
-
 <script>
   $(document).ready(function(){
     // Setup datatables
@@ -166,22 +147,15 @@ function delrec() {
           };
       };
 
-      var table = $("#mytable").dataTable({
-          initComplete: function() {
-              var api = this.api();
-              $('#mytable_filter input')
-                  .off('.DT')
-                  .on('input.DT', function() {
-                      api.search(this.value).draw();
-              });
-          },	
+      var table = $("#mytable").DataTable({
+          	
               oLanguage: {
               sProcessing: "LOADING..."
           },
-              processing: true,
-              serverSide: true,
-              ajax: {"url": "<?php echo base_url().'index.php/User/get_guest_json'?>", "type": "POST"},
-                  columns: [
+              "processing": true,
+              "serverSide": true,
+              "ajax": {"url": "<?php echo base_url().'index.php/User/get_guest_json'?>", "type": "POST"},
+                  "columns": [
                         {"data": "id_user"},
                         {"data": "nama_user"},
                         {"data": "username"},
@@ -193,7 +167,7 @@ function delrec() {
                         {"data": "view", "sortable":false},
                         // {"data": "view"},
                   ],
-              order: [[1, 'asc']],
+              "order": [[1, 'asc']],
           rowCallback: function(row, data, iDisplayIndex) {
               var info = this.fnPagingInfo();
               var page = info.iPage;
@@ -289,4 +263,9 @@ function delrec() {
           });
       }); 
   });
+</script>
+<script>
+function delrec() {
+  document.getElementById("add-row-form").reset();
+}
 </script>

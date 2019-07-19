@@ -1,30 +1,37 @@
 <?php $this->view('template.php'); ?>
 
-	
+          <header class="page-header">
+            <h2>Request Aplication</h2>
+          
+            <div class="right-wrapper pull-right">
+              <ol class="breadcrumbs">
+                <li>
+                  <a href="<?php echo site_url(). '/Dashboard' ?>">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li><span>Data Divisi</span></li>
+              </ol>
+          
+              <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+            </div>
+          </header>
+
 
 						<section class="panel">
-							<header class="panel-heading">
-								<div class="panel-actions">
-									<a href="#" class="fa fa-caret-down"></a>
-									<a href="#" class="fa fa-times"></a>
-								</div>
-						
-								<h2 class="panel-title">Table</h2>
+							<header class="panel-heading">						
+								<h2 class="panel-title">TABLE DIVISI</h2>
 							</header>
 							<div class="panel-body">
-										<div class="table-responsive">
-											<button class="btn-md btn-outline-success" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH USER</button>
-										 	<br><br>
-							<div class="panel-body">
+											<button class="btn navbar-btn mx-auto text-white btn-outline-light" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH DIVISI</button>
 								<table class="display" id="mytable"  style="width:100%">
           							<thead>
-										<tr>
-											<th>Kode Divisi</th>
-											<th>Nama Divisi</th>
-											<th>Aksi</th>
-											
-										</tr>
-									</thead>
+      										<tr>
+      											<th>Kode Divisi</th>
+      											<th>Nama Divisi</th>
+      											<th>Aksi</th>
+      										</tr>
+      									</thead>
 									</table>
 							</div>
 						</section>
@@ -107,7 +114,7 @@
 
 	<?php $this->view('footer.php'); ?>
 
-	</body>
+	
 
 <script>
 	function delrec() {
@@ -129,14 +136,7 @@
       };
 
       var table = $("#mytable").DataTable({
-          initComplete: function() {
-              var api = this.api();
-              $('#mytable_filter input')
-                  .off('.DT')
-                  .on('input.DT', function() {
-                      api.search(this.value).draw();
-              });
-          },	
+         
               oLanguage: {
               sProcessing: "LOADING..."
           },
