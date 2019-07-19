@@ -72,7 +72,11 @@ class DaftarP extends CI_Controller {
 		        'db'        => 'tgl_onproses',
 		        'dt'        => 'tgl_onproses',
 		        'formatter' => function( $d, $row ) {
-		            return date( 'd M y', strtotime($d));
+		        	if ('tgl_onproses'==null) {
+		            	return date( 'd M Y', strtotime($d));	
+		        	}else{
+		            	return date( 'd M y', strtotime("0000-00-00"));	
+		        	}
 		        }
 		    ),
 		    array(
