@@ -18,16 +18,45 @@ class Registrasi extends CI_Controller {
 
 	function simpan()
 	{
+
+		$this->db->select("no_psa");
+		$this->db->from("data_request");
+		$this->db->limit(1);
+		$this->db->order_by('no_psa',"DESC");
+		$query = $this->db->get();
+		$result = $query->result();
+		if ($result==null) {
+			$div="";
+			$th=date("Y");
+			$n="00";
+			$n2 = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
+			$psa=$th."".$div."".$n2;
+		}else{
+			foreach ($result as $id) {				
+				$th=date("Y");
+				$n=$id->no_psa;
+				$th_db=substr($n, 0,4);
+				if ($th>$th_db) {
+					$n="00";	
+				}
+				$n2 = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
+				$psa=$n2;
+			}
+		}
+
 		date_default_timezone_set('Asia/Jakarta');
-		$d=strtotime($this->input->post('tgl_digunakan'));
-		
-		$psa="123141";
+		$date = $this->input->post('tgl_digunakan');
+		$timestamp = strtotime($date);
+		if ($timestamp === FALSE) {
+		  $timestamp = strtotime(str_replace('/', '-', $date));
+		}
+
 		$data1 = [
 		    'no_psa' => $psa,
 		    'nama_user' => $this->input->post('nama_user'),
 		    'no_telp' => $this->input->post('no_telp'),
-		    'divisi' => $this->input->post('divisi'),
-		    'tgl_digunakan' => date("Y-m-d",$d),
+		    'divisi' => substr($this->input->post('divisi'),0,5),
+		    'tgl_digunakan' => date("Y-m-d",$timestamp),
 		    'nama_aplikasi' => $this->input->post('nama_aplikasi'),
 		    'status' => '1',
 		    'departemen' => $this->input->post('departemen'),
@@ -42,9 +71,8 @@ class Registrasi extends CI_Controller {
 		    'output' => $this->input->post('output'),
 		    'kebutuhan' => $this->input->post('kebutuhan'),
 		];
-
-		$this->db->insert('data_request', $data1);
-		$this->db->insert('detail', $data2);
+		$dr=$this->db->insert('data_request', $data1);
+		$detail=$this->db->insert('detail', $data2);
     	redirect('User', 'refresh');
 	}
 

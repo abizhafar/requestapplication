@@ -264,7 +264,7 @@
     var availableTags = [
      	<?php 
 			foreach ($divisi as $key) {
-				echo '"'.$key->divisi.'",';
+				echo '"'.$key->id_divisi.' | '.$key->divisi.'",';
 			}
 
 		 ?>

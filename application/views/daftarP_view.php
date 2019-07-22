@@ -181,7 +181,7 @@ $(document).ready(function() {
             { "data": "divisi" },
             { "data": "departemen" },
             { "data": "nama_aplikasi" },
-            { "data": "tgl_interview" },
+            { "data": "tgl_interview", defaultContent: ""},
             { "data": "tgl_digunakan" },
             { "data": "status" },
             { "data": "", "visible":true,"orderable":false, "searchable": false, "render": function (data, type, row) {
@@ -189,7 +189,7 @@ $(document).ready(function() {
         	}],
         	 "columnDefs" : [
 		        { targets : [9],
-		          render : function (data, type, row) {
+		        	render : function (data, type, row) {
 		            switch(data) {
 		               case '1' : return '<span class="label label-warning">Waiting</span>'; break;
 		               case '2' : return '<span class="label label-primary">On-Process</span>'; break;
@@ -197,7 +197,18 @@ $(document).ready(function() {
 		               default  : return 'N/A';
 		            }
 		          }
+		        },
+		        { targets : [7,8],
+		        	render : function(data, type, row, meta){
+		        		if (data == null){
+	                          return '';
+	                      }else{
+		        		 	  return moment(data).format('DD-MM-YYYY');
+	                      }
+		        		}
 		        }
+		          
+		        
 		   ],
         "order": [[1, 'asc']],
 	} );

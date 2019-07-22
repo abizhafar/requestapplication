@@ -1936,7 +1936,52 @@ var defaults = $.fn.steps.defaults = {
      * @default function (event, currentIndex) { }
      * @for defaults
      **/
-    onFinished: function (event, currentIndex) {  $("#form").submit(); },
+    onFinished: function (event, currentIndex) {  
+        // var divisi = $("#divisi").val();
+        // var departemen = $("#departemen").val();
+        // var nama_user = $("#nama_user").val();
+        // var no_telp = $("#no_telp").val();
+        // var nama_aplikasi = $("#nama_aplikasi").val();
+        // var tgl_digunakan = $("#tgl_digunakan").val();
+        // var permasalahan = $("#permasalahan").val();
+        // var fungsi = $("#fungsi").val();
+        // var pengguna = $("#pengguna").val();
+        // var input = $("#input").val();
+        // var proses = $("#proses").val();
+        // var output = $("#output").val();
+        // var kebutuhan = $("#kebutuhan").val();
+
+        // var dataString = 
+        //         'divisi='+ divisi + 
+        //         '&departemen='+ departemen + 
+        //         '&nama_user='+ nama_user + 
+        //         '&no_telp='+ no_telp +
+        //         '&nama_aplikasi='+ nama_aplikasi + 
+        //         '&tgl_digunakan='+ tgl_digunakan + 
+        //         '&permasalahan='+ permasalahan + 
+        //         '&fungsi='+ fungsi + 
+        //         '&pengguna='+ pengguna + 
+        //         '&input='+ input + 
+        //         '&proses='+ proses + 
+        //         '&output='+ output ;
+        //         '&kebutuhan='+ kebutuhan ;
+        // if(divisi==''||departemen==''||nama_user==''||no_telp==''||nama_aplikasi==''||tgl_digunakan==''||permasalahan==''||fungsi==''||pengguna==''||input==''||proses==''||output==''||kebutuhan=='')
+        // {
+        //     alert("Please Fill All Fields");
+        // }else{
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "Registrasi/simpan",
+        //         data: dataString,
+        //         cache: false,
+        //         success: function(result){
+        //             alert(result);
+        //         }
+        //     });
+        // }
+        // return false;
+        $("#form").submit();
+    },
 
     /**
      * Fires after async content is loaded. 
