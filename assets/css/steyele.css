@@ -243,7 +243,7 @@ body {
     -webkit-border-radius: 4px;
     -o-border-radius: 4px;
     -ms-border-radius: 4px;
-    padding: 0 20px;
+    padding: 0 5px;
 }
 .inner .form-row .form-holder legend {
 	font-size: 11px;
