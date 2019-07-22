@@ -11,9 +11,6 @@
 		<meta name="author" content="okler.net">
 		<link rel="apple-touch-icon" href="https://pmb.aknbojonegoro.ac.id/wp-content/uploads/2019/02/cropped-polinema.png">
 		<link rel="shortcut icon" href="https://pmb.aknbojonegoro.ac.id/wp-content/uploads/2019/02/cropped-polinema.png">
-		
-		<!-- Reset -->
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/reset.css">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -183,7 +180,7 @@
 				</aside>
 				<!-- end: sidebar -->
 
-				<section role="main" class="content-body" style="margin: 0 auto; width: 100%">
+				<section role="main" class="content-body">
 			
 				<section role="main" class="content-body">
 					<header class="page-header">
