@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.css" />
 	<!-- Main Style Css -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/stail.css"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/steyele.css"/>
     <!-- tanggalan -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css"/>
     <!-- CSS dependencies -->
