@@ -129,14 +129,14 @@
 									if ($url=="Divisi") {?>
 									<li class="nav-active">
 										<a href="<?php echo site_url() ?>/Divisi">
-											<i class="fa fa-home" aria-hidden="true"></i>
+											<i class="fa fa-building-o" aria-hidden="true"></i>
 											<span>Divisi</span>
 										</a>
 									</li>
 								<?php }else{?>
 									<li>
 										<a href="<?php echo site_url() ?>/Divisi">
-											<i class="fa fa-home" aria-hidden="true"></i>
+											<i class="fa fa-building-o" aria-hidden="true"></i>
 											<span>Divisi</span>
 										</a>
 									</li>
