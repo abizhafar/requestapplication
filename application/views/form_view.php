@@ -126,7 +126,7 @@
 										<div class="row" style="margin-bottom: 10px">
 											<div class="col-lg-12" class="form-control">
 												<label class="control-label"><i>Inputing</i></label>
-												<textarea class="form-control" data-provide="markdown" rows="5" name="Inputing" placeholder="Uraikan yang diinputkan pada aplikasi yang diminta"></textarea>
+												<textarea class="form-control" data-provide="markdown" rows="5" name="Input" placeholder="Uraikan yang diinputkan pada aplikasi yang diminta"></textarea>
 											</div>
 										</div>
 										<div class="row" style="margin-bottom: 10px">
@@ -155,7 +155,7 @@
 										<div class="col-sm-6">
 											<div class="radio-inline">
   												<label>
-    													 <input type="radio" name="optradio" checked>
+    													 <input type="radio" name="optradio" checked >
    														Application in Waiting List
   												</label>
 											</div>
@@ -174,7 +174,7 @@
 											<div class="radio-inline">
   												<label>
     													<input type="radio" name="optradio" checked>
-   														Application Complete
+   														Application in Trial
   												</label>
 											</div>
 										</div>
@@ -182,16 +182,16 @@
 											<div class="radio-inlinea">
   												<label>
     												<input type="radio" name="optradio" checked>
-   														Application Denied
+   														Application Complete
   												</label>
 											</div>
 										</div>
 									</div>
 										
 										<br><br>
-										<button class="btn btn-primary">SIMPAN</button>
+										<button class="btn btn-primary"><i class="glyphicon glyphicon-save"></i> SIMPAN</button>
 											&nbsp &nbsp
-										<button class="btn btn-success">PRINT</button>
+										<button class="btn btn-success"><i class="glyphicon glyphicon-print"></i> PRINT</button>
 									</div>
 								</div>
 								
