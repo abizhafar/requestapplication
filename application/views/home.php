@@ -17,7 +17,25 @@
 
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8f8f8f; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: -webkit-linear-gradient( 450deg, #4f289a 0%, #12bbad 100%); 
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -55,6 +73,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   color: #000;
   text-decoration: none;
   cursor: pointer;
+
+
 }
 </style>
 </head>
