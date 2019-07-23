@@ -60,9 +60,6 @@ class Registrasi extends CI_Controller {
 		    'nama_aplikasi' => $this->input->post('nama_aplikasi'),
 		    'status' => '1',
 		    'departemen' => $this->input->post('departemen'),
-		];
-		$data2 = [
-		    'no_psad' => $psa,
 		    'permasalahan' => $this->input->post('permasalahan'),
 		    'fungsi' => $this->input->post('fungsi'),
 		    'pengguna' => $this->input->post('pengguna'),
@@ -72,7 +69,6 @@ class Registrasi extends CI_Controller {
 		    'kebutuhan' => $this->input->post('kebutuhan'),
 		];
 		$dr=$this->db->insert('data_request', $data1);
-		$detail=$this->db->insert('detail', $data2);
     	redirect('User', 'refresh');
 	}
 

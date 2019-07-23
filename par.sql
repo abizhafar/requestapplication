@@ -11,7 +11,7 @@
  Target Server Version : 100134
  File Encoding         : 65001
 
- Date: 18/07/2019 14:55:41
+ Date: 23/07/2019 09:21:19
 */
 
 SET NAMES utf8mb4;
@@ -22,7 +22,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `data_request`;
 CREATE TABLE `data_request`  (
-  `no_psa` int(50) NOT NULL,
+  `no_psa` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `nama_user` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `no_telp` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `divisi` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
@@ -33,20 +33,30 @@ CREATE TABLE `data_request`  (
   `tgl_onproses` date NULL DEFAULT NULL,
   `tgl_deploy` date NULL DEFAULT NULL,
   `departemen` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `permasalahan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `fungsi` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `pengguna` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `input` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `proses` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `output` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `kebutuhan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   PRIMARY KEY (`no_psa`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of data_request
 -- ----------------------------
-INSERT INTO `data_request` VALUES (1030562019, 'Supra', '09986', 'Supply Chain', '2019-07-09', '2019-07-09', 'Pengarsipan Data', '2', '2019-07-31', '2019-07-23', NULL);
+INSERT INTO `data_request` VALUES ('20192100001', 'John', '0999876543', '21000', NULL, '1970-01-01', 'Aplikasi Desain', '1', NULL, NULL, 'Desain Kapal', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `data_request` VALUES ('20192100002', 'none', 'none', '21000', NULL, '1970-01-01', 'none', '1', NULL, NULL, 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `data_request` VALUES ('20192100003', 'John', '920384023', '33000', NULL, '2019-07-31', 'Aplikasi Sales', '1', NULL, NULL, 'Sales', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `data_request` VALUES ('20192100004', 'Loke', '0988882718', '31000', NULL, '2019-07-31', 'Aplikasi Rekayasa', '1', NULL, NULL, 'Rekayasa', 'nd', 'nd', 'nd', 'nd', 'nd', 'nd', 'nd');
 
 -- ----------------------------
 -- Table structure for detail
 -- ----------------------------
 DROP TABLE IF EXISTS `detail`;
 CREATE TABLE `detail`  (
-  `no_psad` int(255) NULL DEFAULT NULL,
+  `no_psad` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `permasalahan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `fungsi` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `pengguna` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
@@ -55,11 +65,6 @@ CREATE TABLE `detail`  (
   `output` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `kebutuhan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of detail
--- ----------------------------
-INSERT INTO `detail` VALUES (1030562019, 'gudang arsip penuh', 'pengarsipan data gfsgfdytdcfty6rtfcgfdcttgfdctrddtyhgvgvyftyfcrt5dfcfgxtrdtufjhvyjfytdcxytfjv btfftfv ctyfytrfgfcyr ffyf tyr76rttv nfn  fyntfytfm v ftymh vg', 'sekretaris divisi', 'data scan', 'proses', 'data tabel arsip', 'server');
 
 -- ----------------------------
 -- Table structure for divisi
@@ -118,11 +123,12 @@ CREATE TABLE `user`  (
   `password` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `akses` int(2) NULL DEFAULT NULL,
   PRIMARY KEY (`id_user`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES (1, 'Administrator', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1);
+INSERT INTO `user` VALUES (2, 'User1', 'user1', '24c9e15e52afc47c225b757e7bee1f9d', 1);
 
 SET FOREIGN_KEY_CHECKS = 1;

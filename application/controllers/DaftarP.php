@@ -23,9 +23,7 @@ class DaftarP extends CI_Controller {
 	function get_data(){
 		// $table="data_request";
 		$table = "
-		 ( SELECT dr.no_psa,dr.nama_aplikasi,dr.nama_user,dr.divisi,dr.no_telp,dr.status,dr.tgl_deploy,dr.tgl_digunakan,dr.tgl_interview,dr.tgl_onproses,dr.departemen,  
-		     d.no_psad,d.permasalahan,d.fungsi,d.pengguna,d.input,d.proses,d.output,d.kebutuhan 
-		     FROM data_request dr JOIN detail d ON dr.no_psa=d.no_psad
+		 ( SELECT * FROM data_request 
 		 ) temp
 		";
 		 
