@@ -26,7 +26,8 @@
 		<!-- Theme Initialization Files -->
 		<script src="<?php echo base_url() ?>assets/javascripts/theme.init.js"></script>
 		
-
+		<script src="<?php echo base_url() ?>assets/javascripts/ui-elements/examples.modals.js"></script>
+		
 		<!-- Examples -->
 		<script src="<?php echo base_url() ?>assets/javascripts/tables/examples.datatables.default.js"></script><!-- 
 		<script src="<?php echo base_url() ?>assets/javascripts/t/examples.datatables.row.with.details.js"></script> -->
@@ -35,6 +36,8 @@
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/markdown.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+		<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.js"></script>
+		
 		
 	</body>
 </html>

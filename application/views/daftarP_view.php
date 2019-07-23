@@ -114,6 +114,25 @@
 				</div>
 			</aside>
 		</section>
+		<form id="add-row-form" action="<?php echo base_url().'index.php/Divisi/update'?>" method="post">
+           <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" style="width: 70%">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                         <h4 class="modal-title" id="myModalLabel">UPDATE DIVISI</h4>
+                     </div>
+                     <div class="modal-body">
+                         <?php $this->view('form_view.php'); ?>
+                     </div>
+                     <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
+                          <button type="submit" id="add-row" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i> PERBARUI</button>
+                     </div>
+                  </div>
+              </div>
+           </div>
+       </form>
 <?php $this->view('footer.php'); ?>
 <script>
 	/* Formatting function for row details - modify as you need */
@@ -185,7 +204,7 @@ $(document).ready(function() {
             { "data": "tgl_digunakan" },
             { "data": "status" },
             { "data": "", "visible":true,"orderable":false, "searchable": false, "render": function (data, type, row) {
-                  return '<a class="" data-toggle="modal" data-no_psa="'+row.no_psa+'" data-nama_user="'+row.nama_user+'" data-no_telp="'+row.no_telp+'" data-divisi="'+row.divisi+'"data-departemen="'+row.departemen+'" data-nama_aplikasi="'+row.nama_aplikasi+'"data-tgl_interview="'+row.tgl_interview+'"data-tgl_digunakan="'+row.tgl_digunakan+'" data-status="'+row.status+'"  data-tgl_proses="'+row.tgl_onproses+'" data-tgl_deploy="'+row.tgl_deploy+'" data-permasalahan="'+row.permasalahan+'" data-fungsi="'+row.fungsi+'" data-pengguna="'+row.pengguna+'" data-input="'+row.input+'" data-proses="'+row.proses+'" data-output="'+row.output+'" data-kebutuhan="'+row.kebutuhan+'" data-target="#ModalUpdate" onclick="delrec()"><a href="<?php echo site_url() ?>/form"><i style="font-size:20px" class="icon fa fa-edit"></i></a></a>'; }
+                  return '<a class="edit_record" data-no_psa="'+row.no_psa+'" data-nama_user="'+row.nama_user+'" data-no_telp="'+row.no_telp+'" data-divisi="'+row.divisi+'"data-departemen="'+row.departemen+'" data-nama_aplikasi="'+row.nama_aplikasi+'"data-tgl_interview="'+row.tgl_interview+'"data-tgl_digunakan="'+row.tgl_digunakan+'" data-status="'+row.status+'"  data-tgl_proses="'+row.tgl_onproses+'" data-tgl_deploy="'+row.tgl_deploy+'" data-permasalahan="'+row.permasalahan+'" data-fungsi="'+row.fungsi+'" data-pengguna="'+row.pengguna+'" data-input="'+row.input+'" data-proses="'+row.proses+'" data-output="'+row.output+'" data-kebutuhan="'+row.kebutuhan+'" href="javascript:void(0);" ><i style="font-size:20px" class="icon fa fa-edit"></i></a>'; }
         	}],
         	 "columnDefs" : [
 		        { targets : [9],
@@ -213,31 +232,30 @@ $(document).ready(function() {
         "order": [[1, 'asc']],
 	} );
 
-     $("#ModalUpdate").on('shown.bs.modal',function(e){
-        var triggerLink = $(e.relatedTarget);
-        var no_psa=triggerLink.data("no_psa");
-        var nama_user=triggerLink.data("nama_user");
-        var no_telp=triggerLink.data('no_telp');
-        var divisi=triggerLink.data('divisi');
-        var departemen=triggerLink.data('departemen');
-        var nama_aplikasi=triggerLink.data('nama_aplikasi');
-        var tgl_interview=triggerLink.data('tgl_interview');
-        var tgl_digunakan=triggerLink.data('tgl_digunakan');
-        var status=triggerLink.data('status');
-        var tgl_proses=triggerLink.data('tgl_proses');
-        var tgl_deploy=triggerLink.data('tgl_deploy');
-        var permasalahan=triggerLink.data('permasalahan');
-        var fungsi=triggerLink.data('fungsi');
-        var input=triggerLink.data('input');
-        var pengguna=triggerLink.data('pengguna');
-        var proses=triggerLink.data('proses');
-        var output=triggerLink.data('output');
-        var kebutuhan=triggerLink.data('kebutuhan');
+$('#example').on('click','.edit_record',function(){
+        var no_psa=$(this).data("no_psa");
+        var nama_user=$(this).data("nama_user");
+        var no_telp=$(this).data('no_telp');
+        var divisi=$(this).data('divisi');
+        var departemen=$(this).data('departemen');
+        var nama_aplikasi=$(this).data('nama_aplikasi');
+        var tgl_interview=$(this).data('tgl_interview');
+        var tgl_digunakan=$(this).data('tgl_digunakan');
+        var status=$(this).data('status');
+        var tgl_proses=$(this).data('tgl_proses');
+        var tgl_deploy=$(this).data('tgl_deploy');
+        var permasalahan=$(this).data('permasalahan');
+        var fungsi=$(this).data('fungsi');
+        var input=$(this).data('input');
+        var pengguna=$(this).data('pengguna');
+        var proses=$(this).data('proses');
+        var output=$(this).data('output');
+        var kebutuhan=$(this).data('kebutuhan');
 
+        $('#ModalUpdate').modal('show');
         $('[name="no_psa"]').val(no_psa);
         $('[name="nama_user"]').val(nama_user);
         $('[name="no_telp"]').val(no_telp);
-        $('[name="tgl_po"]').val(tgl_po);
         $('[name="divisi"]').val(divisi);
         $('[name="departemen"]').val(departemen);
         $('[name="nama_aplikasi"]').val(nama_aplikasi);
