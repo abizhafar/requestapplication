@@ -34,7 +34,7 @@ class Form extends CI_Controller {
     );
     $this->db->where('no_psa',$Nomor);
     $this->db->update('data_request', $data);
-    // $this->db->update('akses', $data);
+
 
     redirect('DaftarP');
 	}

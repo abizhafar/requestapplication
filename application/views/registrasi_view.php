@@ -15,7 +15,7 @@
 	<!-- Main Style Css -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/steyele.css"/>
     <!-- tanggalan -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker4.css"/>
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/nav.css">
     <!-- Script: Make my navbar transparent when the document is scrolled to top -->
@@ -92,6 +92,25 @@ h1 {
     border: none;
     background-color: black;
 }*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8f8f8f; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: -webkit-linear-gradient( 450deg, #4f289a 0%, #12bbad 100%); 
+}
 
 </style>
 
