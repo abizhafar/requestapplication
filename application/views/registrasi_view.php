@@ -36,7 +36,64 @@
     <!-- <link rel="stylesheet" href="markdown/style.css" /> -->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+<style type="text/css">
+body {
+    background-color: #0dd42b
+}
+h1 {
+    color: #96f226;
+    font-size: 36px;
+    width: 108px;
+}
 
+.ui-autocomplete {
+    /*background-image: -webkit-linear-gradient( 450deg, #4f289a 0%, #74ebd5 100%);*/
+    background-color: #fff;
+    border-radius: 1px;
+    border: 2px solid #e5e5e5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    max-height: 90px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* add padding to account for vertical scrollbar */
+    padding-right: 3px;
+
+}
+.ui-menu .ui-menu-item {
+ 	color: black;
+    border-radius: 4px;
+    border: none;
+}
+
+.ui-menu .ui-menu-item:hover {
+ 	color: white;
+    border-radius: 4px;
+    border: none;
+    background: #4f289a;
+}
+
+/*.ui-front{
+	color: #4f289a;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+}
+.ui-widget{
+	color: #4f289a;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+}
+.ui-widget-content{
+	color: #4f289a;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+}*/
+
+</style>
 
 
     
@@ -270,7 +327,8 @@
 		 ?>
 	];
     jQuery( "#divisi" ).autocomplete({
-      source: availableTags
+      source: availableTags,
+      minLength:2
     });
   } );
   </script>
