@@ -71,7 +71,7 @@ h1 {
  	color: white;
     border-radius: 4px;
     border: none;
-    background: #4f289a;
+    background: #12bbad;
 }
 
 /*.ui-front{
