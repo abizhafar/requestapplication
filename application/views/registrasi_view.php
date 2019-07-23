@@ -15,7 +15,7 @@
 	<!-- Main Style Css -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/steyele.css"/>
     <!-- tanggalan -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker3.css"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker4.css"/>
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/nav.css">
     <!-- Script: Make my navbar transparent when the document is scrolled to top -->
