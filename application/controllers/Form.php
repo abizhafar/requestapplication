@@ -23,6 +23,8 @@ class Form extends CI_Controller {
   //     'departemen' => $this->input->post('Departemen'),
   //     'tgl_interview' => $this->input->post("Tanggal_interview"),
   //     'tgl_digunakan' => $this->input->post('Tanggal_rencana'),
+  //     'tgl_onproses' => $this->input->post('Tanggal_prosess'),
+  //     'tgl_deploy'	=> $this->input->post('Tanggal_deploy'),
   //     'nama_aplikasi' => $this->input->post('aplikasi'),
   //     'permasalahan' => $this->input->post('Permasalahan'),
   //     'fungsi' => $this->input->post('Fungsi'),
@@ -34,7 +36,7 @@ class Form extends CI_Controller {
   //   );
   //   $this->db->where('no_psa',$Nomor);
   //   $this->db->update('data_request', $data);
-  //   // $this->db->update('akses', $data);
+    // $this->db->update('akses', $data);
 
   //   redirect('DaftarP');
 	}
