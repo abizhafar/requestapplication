@@ -56,7 +56,7 @@
 			 </div>
                      <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
-                          <button type="submit" id="add-row" class="btn btn-success"><i class="glyphicon glyphicon-floppy-save"></i> SIMPAN</button>
+                          <button type="submit" id="add-row" class="btn btn-success"><i class="glyphicon glyphicon-save"></i> SIMPAN</button>
 						</div>
 					</div>
 				</div>
