@@ -153,17 +153,17 @@
 									<div class="panel-body">
 									<div class="row" style="margin-bottom: 10px">
 										<div class="col-sm-6">
-											<div class="checkbox">
+											<div class="radio-inline">
   												<label>
-    													<input type="checkbox" data-toggle="toggle" data-onstyle="warning">
+    													 <input type="radio" name="optradio" checked>
    														Application in Waiting List
   												</label>
 											</div>
 										</div>
 										<div class="col-sm-6">
-											<div class="checkbox">
+											<div class="radio-inline">
   												<label>
-    													<input type="checkbox" data-toggle="toggle" data-onstyle="success">
+    													 <input type="radio" name="optradio" checked>
    														Application On Progress
   												</label>
 											</div>
@@ -171,17 +171,17 @@
 									</div>
 									<div class="row">
 										<div class="col-sm-6">
-											<div class="checkbox">
+											<div class="radio-inline">
   												<label>
-    													<input type="checkbox" data-toggle="toggle" data-onstyle="info">
+    													<input type="radio" name="optradio" checked>
    														Application Complete
   												</label>
 											</div>
 										</div>
 										<div class="col-sm-6">
-											<div class="checkbox">
+											<div class="radio-inlinea">
   												<label>
-    												<input type="checkbox" data-toggle="toggle" data-onstyle="danger">
+    												<input type="radio" name="optradio" checked>
    														Application Denied
   												</label>
 											</div>
