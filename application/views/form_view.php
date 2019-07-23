@@ -3,13 +3,13 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Nomor PSA</label>
-				<input type="text" name="Nomor" class="form-control">
+				<input type="text" name="no_psa" class="form-control">
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Nama User</label>
-				<input type="text" name="Nama" class="form-control">
+				<input type="text" name="nama_user" class="form-control">
 			</div>
 		</div>
 	</div>
@@ -17,13 +17,13 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Nomor Telepon</label>
-				<input type="text" name="Nomor_tlp" class="form-control">
+				<input type="text" name="no_telp" class="form-control">
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Divisi</label>
-				<input type="text" name="Divisi" class="form-control">
+				<input type="text" name="divisi" class="form-control">
 			</div>
 		</div>
 	</div>
@@ -31,13 +31,13 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Departemen</label>
-				<input type="text" name="Departemen" class="form-control">
+				<input type="text" name="departemen" class="form-control">
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Interview User</label>
-				<input type="text" name="Tanggal_interview" class="form-control">
+				<input type="text" name="tgl_interview" class="form-control">
 			</div>
 		</div>
 	</div>
@@ -45,13 +45,13 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Rencana Digunakan</label>
-				<input type="text" name="Tanggal_rencana" class="form-control">
+				<input type="text" name="tgl_digunakan" class="form-control">
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Proses</label>
-				<input type="text" name="Tanggal_prosess" class="form-control">
+				<input type="text" name="tgl_proses" class="form-control">
 			</div>
 		</div>
 	</div>
@@ -59,13 +59,13 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Deploy</label>
-				<input type="text" name="Tanggal_deploy" class="form-control">
+				<input type="text" name="tgl_deploy" class="form-control">
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Nama Aplikasi</label>
-				<input type="text" name="Aplikasi" class="form-control">
+				<input type="text" name="nama_aplikasi" class="form-control">
 			</div>
 		</div>
 	</div>
@@ -78,19 +78,19 @@
 
 				<label class="control-label">Permasalahan</label>
 
-				<textarea class="form-control" data-provide="markdown" rows="5" name="Permasalahan" placeholder="Uraikan permasalahan yang dihadapi"></textarea>
+				<textarea class="form-control" data-provide="markdown" rows="5" id="permasalahan" name="permasalahan" placeholder="Uraikan permasalahan yang dihadapi"></textarea>
 			</div>
 		</div>
 		<div class="row" style="margin-bottom: 10px">
 			<div class="col-lg-12" class="form-control">
 				<label class="control-label">Fungsi & Kegunaan</label>
-				<textarea class="form-control" data-provide="markdown" rows="5" name="Fungsi" placeholder="Uraikan Fungsi dan Kegunaan aplikasi yang diminta"></textarea>
+				<textarea class="form-control" data-provide="markdown" rows="5" id="fungsi" name="fungsi" placeholder="Uraikan Fungsi dan Kegunaan aplikasi yang diminta"></textarea>
 			</div>
 		</div>
 		<div class="row" style="margin-bottom: 10px">
 			<div class="col-lg-12" class="form-control">
 				<label class="control-label">Pengguna</label>
-				<textarea class="form-control" data-provide="markdown" rows="5" name="Pengguna" placeholder="Uraikan Pengguna aplikasi yang diminta"></textarea>
+				<textarea class="form-control" data-provide="markdown" rows="5" id="pengguna" name="pengguna" placeholder="Uraikan Pengguna aplikasi yang diminta"></textarea>
 			</div>
 		</div>
 		<br>
@@ -99,25 +99,25 @@
 		<div class="row" style="margin-bottom: 10px">
 			<div class="col-lg-12" class="form-control">
 				<label class="control-label"><i>Inputing</i></label>
-				<textarea class="form-control" data-provide="markdown" rows="5" name="Input" placeholder="Uraikan yang diinputkan pada aplikasi yang diminta"></textarea>
+				<textarea class="form-control" data-provide="markdown" rows="5" id="input" name="input" placeholder="Uraikan yang diinputkan pada aplikasi yang diminta"></textarea>
 			</div>
 		</div>
 		<div class="row" style="margin-bottom: 10px">
 			<div class="col-lg-12" class="form-control">
 				<label class="control-label">Proses-proses</label>
-				<textarea class="form-control" data-provide="markdown" rows="5" name="Proses" placeholder="Uraikan Proses-proses aplikasi yang diminta"></textarea>
+				<textarea class="form-control" data-provide="markdown" rows="5" id="proses" name="proses" placeholder="Uraikan Proses-proses aplikasi yang diminta"></textarea>
 			</div>
 		</div>
 		<div class="row" style="margin-bottom: 10px">
 			<div class="col-lg-12" class="form-control">
 				<label class="control-label"><i>Output</i></label>
-				<textarea class="form-control" data-provide="markdown" rows="5" name="Output" placeholder="Uraikan Output aplikasi yang diminta"></textarea>
+				<textarea class="form-control" data-provide="markdown" id="output" rows="5" name="output" placeholder="Uraikan Output aplikasi yang diminta"></textarea>
 			</div>
 		</div>
 		<div class="row" style="margin-bottom: 10px">
 			<div class="col-lg-12" class="form-control">
 				<label class="control-label">Kebutuhan Komputer & Peripheral </label>
-				<textarea class="form-control" data-provide="markdown" rows="5" name="Kebutuhan" placeholder="Uraikan Kebutuhan Komputer aplikasi yang diminta"></textarea>
+				<textarea class="form-control" data-provide="markdown" id="kebutuhan" rows="5" name="kebutuhan" placeholder="Uraikan Kebutuhan Komputer aplikasi yang diminta"></textarea>
 			</div>
 		</div>
 	<br>	
@@ -128,7 +128,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inline">
 					<label>
-						 <input type="radio" name="optradio" checked >
+						 <input type="radio" id="optradio1" name="optradio" value="1">
 							Application in Waiting List
 					</label>
 			</div>
@@ -136,7 +136,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inline">
 					<label>
-						 <input type="radio" name="optradio" checked>
+						 <input type="radio" id="optradio2" name="optradio" value="2" >
 							Application On Progress
 					</label>
 			</div>
@@ -146,7 +146,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inline">
 					<label>
-						<input type="radio" name="optradio" checked>
+						<input type="radio" id="optradi3" name="optradio" value="3" >
 							Application in Trial
 					</label>
 			</div>
@@ -154,7 +154,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inlinea">
 					<label>
-					<input type="radio" name="optradio" checked>
+					<input type="radio" id="optradi4" name="optradio" value="4" >
 							Application Complete
 					</label>
 			</div>

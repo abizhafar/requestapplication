@@ -263,17 +263,21 @@ $('#example').on('click','.edit_record',function(){
         $('[name="tgl_digunakan"]').val(tgl_digunakan);
         $('[name="tgl_proses"]').val(tgl_proses);
         $('[name="tgl_deploy"]').val(tgl_deploy);
-        $('[name="permasalahan"]').val(permasalahan);
-        $('[name="fungsi"]').val(fungsi);
-        $('[name="input"]').val(input);
-        $('[name="pengguna"]').val(pengguna);
-        $('[name="proses"]').val(proses);
-        $('[name="output"]').val(output);
-        $('[name="kebutuhan"]').val(kebutuhan);
+        $('[id="permasalahan"]').text(permasalahan);
+        $('[id="fungsi"]').text(fungsi);
+        $('[id="input"]').text(input);
+        $('[id="pengguna"]').text(pengguna);
+        $('[id="proses"]').text(proses);
+        $('[id="output"]').text(output);
+        $('[id="kebutuhan"]').text(kebutuhan);
         if(status=="1"){
-          $('input[id="status1"]').prop('checked',true);
+          $('input[id="optradio1"]').prop('checked',true);
         }else if(status=="2"){
-          $('input[id="status2"]').prop('checked',true);
+          $('input[id="optradio2"]').prop('checked',true);
+        }else if(status=="3"){
+          $('input[id="optradio3"]').prop('checked',true);
+        }else if(status=="4"){
+          $('input[id="optradio4"]').prop('checked',true);
         };
       });
 
