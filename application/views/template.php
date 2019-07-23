@@ -41,9 +41,6 @@
 		<!-- Link editor textarea -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
 
-		<!-- Toggle CSS -->
-		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-
 		<!-- Head Libs -->
 		<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.js"></script>
 		<style>

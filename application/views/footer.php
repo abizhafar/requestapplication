@@ -35,9 +35,6 @@
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/markdown.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
-
-		<script src="<?php echo base_url() ?>assets/vendor/ios7-switch/ios7-switch.js"></script>
-
-		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+		
 	</body>
 </html>
