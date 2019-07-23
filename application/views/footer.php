@@ -10,6 +10,9 @@
 		
 		<!-- Specific Page Vendor -->
 		<script src="<?php echo base_url() ?>assets/vendor/select2/select2.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.12/sorting/datetime-moment.js"></script>
+		
 		<script src="<?php echo base_url() ?>assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
@@ -22,7 +25,7 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="<?php echo base_url() ?>assets/javascripts/theme.init.js"></script>
-
+		
 
 		<!-- Examples -->
 		<script src="<?php echo base_url() ?>assets/javascripts/tables/examples.datatables.default.js"></script><!-- 
@@ -32,5 +35,6 @@
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/markdown.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
 		<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+		
 	</body>
 </html>

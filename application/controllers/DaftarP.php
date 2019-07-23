@@ -23,9 +23,7 @@ class DaftarP extends CI_Controller {
 	function get_data(){
 		// $table="data_request";
 		$table = "
-		 ( SELECT dr.no_psa,dr.nama_aplikasi,dr.nama_user,dr.divisi,dr.no_telp,dr.status,dr.tgl_deploy,dr.tgl_digunakan,dr.tgl_interview,dr.tgl_onproses,dr.departemen,  
-		     d.no_psad,d.permasalahan,d.fungsi,d.pengguna,d.input,d.proses,d.output,d.kebutuhan 
-		     FROM data_request dr JOIN detail d ON dr.no_psa=d.no_psad
+		 ( SELECT * FROM data_request 
 		 ) temp
 		";
 		 
@@ -54,28 +52,15 @@ class DaftarP extends CI_Controller {
 		    array( 'db' => 'output',     'dt' => 'output' ),
 		    array( 'db' => 'kebutuhan',     'dt' => 'kebutuhan' ),
 		    array( 'db' => 'status',     'dt' => 'status' ),
-		    array(
-		        'db'        => 'tgl_interview',
-		        'dt'        => 'tgl_interview',
-		        'formatter' => function( $d, $row ) {
-		            return date( 'd M y', strtotime($d));
-		        }
-		    ),
-		    array(
-		        'db'        => 'tgl_digunakan',
-		        'dt'        => 'tgl_digunakan',
-		        'formatter' => function( $d, $row ) {
-		            return date( 'd M y', strtotime($d));
-		        }
-		    ),
-		    array(
-		        'db'        => 'tgl_onproses',
+		    array( 'db' => 'tgl_interview', 'dt' => 'tgl_interview'),
+		    array( 'db'        => 'tgl_digunakan','dt' => 'tgl_digunakan'),
+		    array('db'        => 'tgl_onproses',
 		        'dt'        => 'tgl_onproses',
 		        'formatter' => function( $d, $row ) {
-		        	if ('tgl_onproses'==null) {
-		            	return date( 'd M Y', strtotime($d));	
+		        	if ($d==null) {
+		            	return "";
 		        	}else{
-		            	return date( 'd M y', strtotime("0000-00-00"));	
+		            	return date( 'd M Y', strtotime($d));	
 		        	}
 		        }
 		    ),
@@ -83,7 +68,11 @@ class DaftarP extends CI_Controller {
 		        'db'        => 'tgl_deploy',
 		        'dt'        => 'tgl_deploy',
 		        'formatter' => function( $d, $row ) {
-		            return date( 'd M y', strtotime($d));
+		            if ($d==null) {
+		            	return "";
+		        	}else{
+		            	return date( 'd M Y', strtotime($d));	
+		        	}
 		        }
 		    ),
 		);

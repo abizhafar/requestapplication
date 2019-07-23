@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="https://pmb.aknbojonegoro.ac.id/wp-content/uploads/2019/02/cropped-polinema.png">
     <!-- <link rel="shortcut icon" href="https://pmb.aknbojonegoro.ac.id/wp-content/uploads/2019/02/cropped-polinema.png"> -->
-	<title>registration</title>
+	<title>Regristation Application Request</title>
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -321,7 +321,7 @@ h1 {
     var availableTags = [
      	<?php 
 			foreach ($divisi as $key) {
-				echo '"'.$key->divisi.'",';
+				echo '"'.$key->id_divisi.' | '.$key->divisi.'",';
 			}
 
 		 ?>

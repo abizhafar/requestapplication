@@ -1,7 +1,29 @@
 <?php $this->view('template.php'); ?>
 
-<link rel="stylesheet" href="assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
-			<!-- Start page -->
+		<!-- link rel="stylesheet" href="assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" /> -->
+		
+			<!-- Start HEader -->
+
+					<header class="page-header">
+						<h2>Request Aplication</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="<?php echo site_url() ?>/dashboard">
+										<i class="fa fa-home"></i>
+									</a>
+								</li>	
+								<li><span>Form Permintaan</span></li>
+							</ol>
+					
+							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+						</div>
+					</header>
+
+			<!-- End Header -->
+
+			<!-- Start Page -->
 
 					<div class="col-md-12">
 							<section class="panel">
@@ -125,15 +147,54 @@
 												<textarea class="form-control" data-provide="markdown" rows="5" name="Kebutuhan" placeholder="Uraikan Kebutuhan Komputer aplikasi yang diminta"></textarea>
 											</div>
 										</div>
-										</form>
+									<br>	
+									<label><b>STATUS APLIKASI</b></label>
+
+									<div class="panel-body">
+									<div class="row" style="margin-bottom: 10px">
+										<div class="col-sm-6">
+											<div class="radio-inline">
+  												<label>
+    													 <input type="radio" name="optradio" checked>
+   														Application in Waiting List
+  												</label>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="radio-inline">
+  												<label>
+    													 <input type="radio" name="optradio" checked>
+   														Application On Progress
+  												</label>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="radio-inline">
+  												<label>
+    													<input type="radio" name="optradio" checked>
+   														Application Complete
+  												</label>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="radio-inlinea">
+  												<label>
+    												<input type="radio" name="optradio" checked>
+   														Application Denied
+  												</label>
+											</div>
+										</div>
+									</div>
+										
+										<br><br>
+										<button class="btn btn-primary">SIMPAN</button>
+											&nbsp &nbsp
+										<button class="btn btn-success">PRINT</button>
 									</div>
 								</div>
-								</div>
-								<footer class="panel-footer">
-									<button class="btn btn-primary">SIMPAN</button>
-									&nbsp &nbsp
-									<button class="btn btn-success">PRINT</button>
-								</footer>
+								
 							</section>
 						</div>
 					</div>				
@@ -141,6 +202,5 @@
 						<!-- end: page -->
 <?php $this->view('footer.php'); ?>
 
-<script src="assets/vendor/bootstrap-markdown/js/markdown.js"></script>
-<script src="assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
-<script src="assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+
+
