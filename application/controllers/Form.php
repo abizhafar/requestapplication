@@ -8,6 +8,10 @@ class Form extends CI_Controller {
 		$this->load->view('form_view');	
 	}
 
+	function printed()
+	{
+		$this->load->view('print');
+	}
 }
 
 /* End of file Form.php */

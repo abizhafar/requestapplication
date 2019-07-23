@@ -69,7 +69,7 @@ class Registrasi extends CI_Controller {
 		    'kebutuhan' => $this->input->post('kebutuhan'),
 		];
 		$dr=$this->db->insert('data_request', $data1);
-    	redirect('User', 'refresh');
+    	redirect('Home', 'refresh');
 	}
 
 }
