@@ -91,6 +91,20 @@
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
+												<label class="control-label">Tanggal Proses</label>
+												<input type="text" name="Tanggal_prosess" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="control-label">Tanggal Deploy</label>
+												<input type="text" name="Tanggal_deploy" class="form-control">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
 												<label class="control-label">Nama Aplikasi</label>
 												<input type="text" name="Aplikasi" class="form-control">
 											</div>
@@ -201,6 +215,5 @@
 
 						<!-- end: page -->
 <?php $this->view('footer.php'); ?>
-
 
 
