@@ -55,7 +55,7 @@ class Registrasi extends CI_Controller {
 		    'no_psa' => $psa,
 		    'nama_user' => $this->input->post('nama_user'),
 		    'no_telp' => $this->input->post('no_telp'),
-		    'divisi' => substr($this->input->post('divisi'),0,5),
+		    'divisi' => substr($this->input->post('divisi'),8,50),
 		    'tgl_digunakan' => date("Y-m-d",$timestamp),
 		    'nama_aplikasi' => $this->input->post('nama_aplikasi'),
 		    'status' => '1',

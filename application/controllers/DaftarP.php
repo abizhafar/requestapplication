@@ -52,13 +52,34 @@ class DaftarP extends CI_Controller {
 		    array( 'db' => 'output',     'dt' => 'output' ),
 		    array( 'db' => 'kebutuhan',     'dt' => 'kebutuhan' ),
 		    array( 'db' => 'status',     'dt' => 'status' ),
-		    array( 'db' => 'tgl_interview', 'dt' => 'tgl_interview'),
-		    array( 'db'        => 'tgl_digunakan','dt' => 'tgl_digunakan'),
-		    array('db'        => 'tgl_onproses',
+		    array( 
+			    	'db' => 'tgl_interview', 
+			    	'dt' => 'tgl_interview',
+			    	'formatter' => function( $d, $row ) {
+			        	if ($d=="0000-00-00"||$d==null||$d=="1970-01-01") {
+			            	return "Belum Diset";
+			        	}else{
+			            	return date( 'd M Y', strtotime($d));	
+			        	}
+			        }
+			),
+		    array( 
+		    	   'db' => 'tgl_digunakan',
+		    	   'dt' => 'tgl_digunakan',
+		    		'formatter' => function( $d, $row ) {
+		        	if ($d=="0000-00-00"||$d==null||$d=="1970-01-01") {
+		            	return "Belum Diset";
+		        	}else{
+		            	return date( 'd M Y', strtotime($d));	
+		        	}
+		        }
+			),
+		    array(
+		    	'db'        => 'tgl_onproses',
 		        'dt'        => 'tgl_onproses',
 		        'formatter' => function( $d, $row ) {
-		        	if ($d==null) {
-		            	return "";
+		        	if ($d=="0000-00-00"||$d==null||$d=="1970-01-01") {
+		            	return "Belum Diset";
 		        	}else{
 		            	return date( 'd M Y', strtotime($d));	
 		        	}
@@ -68,8 +89,8 @@ class DaftarP extends CI_Controller {
 		        'db'        => 'tgl_deploy',
 		        'dt'        => 'tgl_deploy',
 		        'formatter' => function( $d, $row ) {
-		            if ($d==null) {
-		            	return "";
+		            if ($d=="0000-00-00"||$d==null||$d=="1970-01-01") {
+		            	return "Belum Diset";
 		        	}else{
 		            	return date( 'd M Y', strtotime($d));	
 		        	}

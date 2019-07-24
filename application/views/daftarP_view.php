@@ -219,10 +219,10 @@ $(document).ready(function() {
 		        },
 		        { targets : [7,8],
 		        	render : function(data, type, row, meta){
-		        		if (data == null){
+		        		if (data == null || data=="Belum Diset" || data=="01 Jan 1970"){
 	                          return '';
 	                      }else{
-		        		 	  return moment(data).format('DD-MM-YYYY');
+		        		 	  return moment(data).format('DD MMM YYYY');
 	                      }
 		        		}
 		        }
