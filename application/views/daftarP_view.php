@@ -114,7 +114,7 @@
 				</div>
 			</aside>
 		</section>
-		<form id="add-row-form" action="<?php echo base_url().'index.php/Divisi/update'?>" method="post">
+		<form id="add-row-form" action="<?php echo base_url().'index.php/Form/update'?>" method="post">
            <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog" style="width: 70%">
                  <div class="modal-content">
@@ -126,8 +126,8 @@
                          <?php $this->view('form_view.php'); ?>
                      </div>
                      <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
-                          <button type="submit" id="add-row" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i> PERBARUI</button>
+                         <!--  <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
+                          <button type="submit" id="add-row" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i> PERBARUI</button> -->
                      </div>
                   </div>
               </div>

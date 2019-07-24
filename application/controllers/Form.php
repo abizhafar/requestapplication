@@ -14,25 +14,59 @@ class Form extends CI_Controller {
 	}
 	function update()
 	{
-	 $Nomor=$this->input->post('Nomor');
+		date_default_timezone_set('Asia/Jakarta');
+		$digunakan = $this->input->post('tgl_digunakan');
+		$interview = $this->input->post('tgl_interview');
+		$deploy = $this->input->post('tgl_deploy');
+		$proses = $this->input->post('tgl_proses');
+		
+		$d = strtotime($digunakan);
+		if ($d === FALSE) {
+			$tgl_digunakan = strtotime(str_replace('/', '-', $d));
+		}else{
+			$tgl_digunakan=$d;
+		}
+		$i = strtotime($interview);
+		if ($i === FALSE) {
+			$tgl_interview = strtotime(str_replace('/', '-', $i));
+		}else{
+			$tgl_interview=$i;
+		}
+		$e = strtotime($deploy);
+		if ($e === FALSE) {
+			$tgl_deploy = strtotime(str_replace('/', '-', $e));
+		}else{
+			$tgl_deploy=$e;
+		}
+		$p = strtotime($proses);
+		if ($p === FALSE) {
+			$tgl_proses = strtotime(str_replace('/', '-', $p));
+		}else{
+			$tgl_proses=$p;
+		}
+
+		$no_psa=$this->input->post('no_psa');
+
      $data=array(
-      'no_psa'     => $this->input->post('Nomor'),
-      'nama_user'   => $this->input->post('Nama'),
-      'no_telp'    => $this->input->post('Nomor_tlp'),
-      'divisi'	  => $this->input->post('Divisi'),
-      'departemen' => $this->input->post('Departemen'),
-      'tgl_interview' => $this->input->post("Tanggal_interview"),
-      'tgl_digunakan' => $this->input->post('Tanggal_rencana'),
-      'nama_aplikasi' => $this->input->post('aplikasi'),
-      'permasalahan' => $this->input->post('Permasalahan'),
-      'fungsi' => $this->input->post('Fungsi'),
-      'pengguna' => $this->input->post('Pengguna'),
-      'input' => $this->input->post('Input'),
-      'proses' => $this->input->post('Proses'),
-      'output' => $this->input->post('Output'),
-      'kebutuhan' => $this->input->post('Kebutuhan')
+      'nama_user'   => $this->input->post('nama_user'),
+      'no_telp'    => $this->input->post('no_tlp'),
+      'divisi'	  => $this->input->post('divisi'),
+      'departemen' => $this->input->post('departemen'),
+      'tgl_interview' => date("Y-m-d",$tgl_interview),
+      'tgl_digunakan' => date("Y-m-d",$tgl_digunakan),
+      'tgl_deploy' => date("Y-m-d",$tgl_deploy),
+      'tgl_onproses' => date("Y-m-d",$tgl_proses),
+      'nama_aplikasi' => $this->input->post('nama_aplikasi'),
+      'permasalahan' => $this->input->post('permasalahan'),
+      'fungsi' => $this->input->post('fungsi'),
+      'pengguna' => $this->input->post('pengguna'),
+      'input' => $this->input->post('input'),
+      'proses' => $this->input->post('proses'),
+      'output' => $this->input->post('output'),
+      'kebutuhan' => $this->input->post('kebutuhan'),
+      'status' => $this->input->post('status')
     );
-    $this->db->where('no_psa',$Nomor);
+    $this->db->where('no_psa',$no_psa);
     $this->db->update('data_request', $data);
 
 

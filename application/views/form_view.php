@@ -1,4 +1,4 @@
-<form action="">
+
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="form-group">
@@ -37,7 +37,7 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Interview User</label>
-				<input type="text" name="tgl_interview" class="form-control">
+				<input type="text" name="tgl_interview" class="form-control" data-provide="datepicker">
 			</div>
 		</div>
 	</div>
@@ -45,13 +45,13 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Rencana Digunakan</label>
-				<input type="text" name="tgl_digunakan" class="form-control">
+				<input type="text" name="tgl_digunakan" class="form-control" data-provide="datepicker">
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Proses</label>
-				<input type="text" name="tgl_proses" class="form-control">
+				<input type="text" name="tgl_proses" class="form-control" data-provide="datepicker">
 			</div>
 		</div>
 	</div>
@@ -59,7 +59,7 @@
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="control-label">Tanggal Deploy</label>
-				<input type="text" name="tgl_deploy" class="form-control">
+				<input type="text" name="tgl_deploy" class="form-control" data-provide="datepicker">
 			</div>
 		</div>
 		<div class="col-sm-6">
@@ -128,7 +128,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inline">
 					<label>
-						 <input type="radio" id="optradio1" name="optradio" value="1">
+						 <input type="radio" id="optradio1" name="status" value="1">
 							Application in Waiting List
 					</label>
 			</div>
@@ -136,7 +136,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inline">
 					<label>
-						 <input type="radio" id="optradio2" name="optradio" value="2" >
+						 <input type="radio" id="optradio2" name="status" value="2" >
 							Application On Progress
 					</label>
 			</div>
@@ -146,7 +146,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inline">
 					<label>
-						<input type="radio" id="optradi3" name="optradio" value="3" >
+						<input type="radio" id="optradi3" name="status" value="3" >
 							Application in Trial
 					</label>
 			</div>
@@ -154,7 +154,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inlinea">
 					<label>
-					<input type="radio" id="optradi4" name="optradio" value="4" >
+					<input type="radio" id="optradi4" name="status" value="4" >
 							Application Complete
 					</label>
 			</div>
@@ -162,11 +162,10 @@
 	</div>
 		
 		<br><br>
-		<button class="btn btn-primary"><i class="glyphicon glyphicon-save"></i> SIMPAN</button>
+		<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-save"></i> SIMPAN</button>
 			&nbsp &nbsp
 		<button class="btn btn-success"><i class="glyphicon glyphicon-print"></i> PRINT</button>
 	</div>	
-</form>
 										
 
 						<!-- end: page -->
