@@ -123,16 +123,11 @@ h1 {
 		<div class="container">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<div class="collapse navbar-collapse justify-content-center" id="navbar2SupportedContent">
-				<a class="navbar-brand" href="<?php echo site_url() ?>/Home"><img width="120px" src="<?php echo base_url() ?>assets/images/logopal.png" alt=""></a>
-				<!-- <ul class="navbar-nav">
-					<li class="nav-item mx-2">
-						<a class="nav-link" href="<?php echo site_url() ?>/Home">Home</a>
-					</li>
-				</ul> -->
-				
+				<a class="navbar-brand" href="<?php echo site_url() ?>/Home"><img width="120px" src="<?php echo base_url() ?>assets/images/logopal.png" alt=""></a>	
 			</div>
 		</div>
 	</nav>
+	<!-- end NAVBAR -->
 	<div class="page-content">
 		<div class="form-v1-content">
 			<div class="wizard-form">
@@ -333,9 +328,8 @@ h1 {
 	<script src="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/js/bs-md.js"></script>
 
 
-
-<script type="text/javascript">
-	
+<!-- Gawe autocomplete -->
+<script type="text/javascript">	
  jQuery( function() {
     var availableTags = [
      	<?php 
@@ -347,7 +341,7 @@ h1 {
 	];
     jQuery( "#divisi" ).autocomplete({
       source: availableTags,
-      minLength:2
+      minLength:2//gawe minimal data nde autocomplete
     });
   } );
   </script>
