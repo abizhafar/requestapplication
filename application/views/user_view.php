@@ -51,15 +51,19 @@
                        <div class="alert alert-primary print-success-msg" style="display:none"></div>
                        <div class="modal-body">
                            <div class="form-group">
+                              <label>ID Petugas</label>
                                <input type="text" id="Nomer_petugas" name="ID" class="form-control" placeholder="Masukkan ID User" required>
                            </div>
                            <div class="form-group">
-                               <input type="text" id="Nama_petugas" name="Nama" class="form-control" placeholder=" Masukkan Nama User" required>
+                              <label>Nama Petugas</label>
+                               <input type="text" id="Nama_petugas" name="Nama" class="form-control" placeholder=" Masukkan Nama Petugas" required>
                            </div>
                            <div class="form-group">
+                              <label>Username</label>
                                <input type="text" id="Username" name="Username" class="form-control" placeholder="Masukkan Username" required>
                            </div>
                            <div class="form-group">
+                              <label>Password</label>
                                <input type="password" id="Password" name="Password" class="form-control" placeholder="Masukkan Password" required>
                            </div>
                       </div>
@@ -83,15 +87,19 @@
                      </div>
                      <div class="modal-body">
                          <div class="form-group">
+                              <label>ID Petugas</label>
                                <input type="text" name="id" class="form-control" placeholder="Masukkan Nomer Petugas" readonly>
                            </div>
                            <div class="form-group">
+                               <label>Nama Petugas</label>
                                <input type="text" name="Nama" class="form-control" placeholder=" Masukkan Nama User" required>
                            </div>
                            <div class="form-group">
+                              <label>Username</label>
                                <input type="text" name="Username" class="form-control" placeholder="Masukkan Username" required>
                            </div>
                            <div class="form-group">
+                               <label>Password</label>
                                <input type="password" name="Password" class="form-control" placeholder="Masukkan Password" required>
                            </div>
                      </div>

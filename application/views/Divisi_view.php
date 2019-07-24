@@ -47,10 +47,12 @@
                        <div class="alert alert-primary print-success-msg" style="display:none"></div>
                        <div class="modal-body">
                            <div class="form-group">
-                               <input type="text" id="id_divisi" name="Kode" class="form-control" placeholder="Masukkan Kode Divisi" required>
+                              <label>Kode Divisi</label>
+                              <input type="text" id="id_divisi" name="Kode" class="form-control" placeholder="Masukkan Kode Divisi" required>
                            </div>
                            <div class="form-group">
-                               <input type="text" id="Nama_divisi" name="Nama" class="form-control" placeholder=" Masukkan Nama Divisi" required>
+                              <label>Nama Divisi</label>
+                              <input type="text" id="Nama_divisi" name="Nama" class="form-control" placeholder=" Masukkan Nama Divisi" required>
                            </div>
                            
 			 </div>
@@ -74,9 +76,11 @@
                      </div>
                      <div class="modal-body">
                          <div class="form-group">
+                              <label>Kode Divisi</label>
                                <input type="text" name="id" class="form-control" placeholder="Masukkan Kode Divisi" readonly>
                            </div>
                            <div class="form-group">
+                              <label>Nama Divisi</label>
                                <input type="text" name="Nama" class="form-control" placeholder=" Masukkan Nama Divisi" required>
                            </div>
                            
