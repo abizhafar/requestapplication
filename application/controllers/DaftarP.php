@@ -8,6 +8,7 @@ class DaftarP extends CI_Controller {
 		parent::__construct();
 		// $this->load->model('Request_Model');
 		$this->load->library('ssp');
+		$this->load->model('Request_Model');
 		 if (!$this->session->userdata('logged_in')) {
 	      redirect('Home','refresh');
 	    }
@@ -117,6 +118,62 @@ class DaftarP extends CI_Controller {
 		);
 	}
 
+	function cari()
+	{
+
+		if($this->input->post("psa"))
+		{
+			$search = $this->input->post("psa");
+			$this->db->where('no_psa', $search);
+			$query=$this->db->get('data_request', 1);
+		}
+		$get=$query->result();
+		if($query->num_rows()>0)
+		{
+		 $output1 = '
+		   <table class="table table-bordered">
+		   <thead>
+		    <tr>
+			    <th>No. PSA</th>
+		        <th>Nama User</th>
+		        <th>No. Telepon</th>
+		        <th>Divisi</th>
+		        <th>Departemen</th>
+		        <th>Nama Aplikasi</th>
+		        <th>Tanggal Interview User</th>
+		        <th>Tanggal Rencana Digunakan</th>
+		        <th>Status</th>
+		    </tr>
+		    </thead>
+		 ';
+		 foreach ($get as $value) {
+		 	switch($value->status) {
+		               case '1' : $status='<td><span class="label label-warning">Waiting</span></td>'; break;
+		               case '2' : $status='<td><span class="label label-primary">On-Process</span></td>'; break;
+		               case '3' : $status='<td><span class="label label-success">Deployment</span></td>'; break;
+		               default  : $status='<td>N/A</td>';}
+		 	$output2 = '
+			 <tbody>  
+			   <tr>
+			    <td>'.$value->no_psa.'</td>
+			    <td>'.$value->nama_user.'</td>
+			    <td>'.$value->no_telp.'</td>
+			    <td>'.$value->divisi.'</td>
+			    <td>'.$value->departemen.'</td>
+			    <td>'.$value->nama_aplikasi.'</td>
+			    <td>'.$value->tgl_interview.'</td>
+			    <td>'.$value->tgl_digunakan.'</td>'.
+			    	$status
+			    .'
+			   </tr>
+			 <tbody>
+			  ';
+		 }
+		echo $output1."".$output2;
+	}else{
+		 echo 'Data Not Found';
+	}
+	}
 }
 
 /* End of file DaftarP.php */

@@ -14,6 +14,13 @@
   <script src="<?php echo base_url() ?>assets/javascripts/navbar-ontop.js"></script>
   <!-- Script: Animated entrance -->
   <script src="<?php echo base_url() ?>assets/javascripts/animate-in.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.css" />
+
+    <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme.css" /> -->
+
 
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -127,42 +134,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
           <h1 class="text-capitalize w-100 text-left" style=""><b>Cek Status Permintaan Aplikasi</b></h1>
           <form action="">
             <div class="input-group">
-              <input type="text" class="form-control form-control-lg" placeholder="Nomor Registrasi PSA">
+              <input type="text" class="form-control form-control-lg" id="psa" name="psa" placeholder="Nomor Registrasi PSA">
               <div class="input-group-append"><button class="btn btn-outline-primary btn-lg text-blue" type="button" onclick="myFunction()" id="cari">Cari</button></div>
             </div>
           </form>
         </div>
       </div>
-      <div class="row">
-      <div class="col-md-12" style="display: none" id="table">
-                <section class="panel">
-                  <header class="panel-heading">            
-                    <h2 class="panel-title">Status Permintaan Aplikasi</h2>
-                  </header>
-                  <div class="panel-body">
-                    <div class="table-responsive">
-                      <table class="table table-condensed mb-none">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </section>
-              </div>
+      <div class="row" id="result"></div>
 
               <div id="myModal" class="modal">
                 <!-- Modal content -->
@@ -176,7 +154,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
                         <div class="form-group"> <input type="text" class="form-control" placeholder="Enter username" required="true" name="username"> </div>
                         <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" required="true" name="password"> <small class="form-text text-muted text-right">
                           </small> </div> <button type="Login" class="btn btn-primary">Submit</button>
-                      </form>
                     </div>
                   </div>
                   </div>
@@ -200,11 +177,41 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <!-- Script: Smooth scrolling between anchors in the same page -->
   <script src="<?php echo base_url() ?>assets/javascripts/smooth-scroll.js" style=""></script>
+    <script src="<?php echo base_url() ?>assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
+
   <script>
-    function myFunction() {
-      document.getElementById("table").style.display = "block";
-    }
+    $(document).ready(function(){
+
+   load_data();
+
+   function load_data(psa)
+   {
+      $.ajax({
+         url:"<?php echo site_url() ?>/DaftarP/cari",
+         method:"POST",
+         data:{psa:psa},
+         success:function(data)
+         {
+          $('#result').html(data);
+         }
+        });
+       }
+       $('#psa').keyup(function(){
+        var search = $(this).val();
+        if(search != '')
+        {
+         load_data(search);
+        }
+        else
+        {
+         load_data();
+        }
+     });
+  });
   </script>
+
 </body>
 
 </html>
