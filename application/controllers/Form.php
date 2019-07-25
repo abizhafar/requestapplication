@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Form extends CI_Controller {
+	public function __construct()
+	{
+		parent::__construct();
+		
+		$this->load->library('session');
+	}
 
 	public function index()
 	{
@@ -10,8 +16,17 @@ class Form extends CI_Controller {
 
 	function printed()
 	{
-		$this->load->view('print');
+
+		$session_data=$this->session->userdata('registered');
+		$no_psa=$session_data['no_psa'];
+
+		$this->db->where('no_psa', $no_psa);
+		$get=$this->db->get('data_request', 1);
+		$data['data']=$get->result();
+		$this->load->view('print',$data);
 	}
+
+
 	function update()
 	{
 		date_default_timezone_set('Asia/Jakarta');

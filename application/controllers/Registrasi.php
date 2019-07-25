@@ -8,6 +8,7 @@ class Registrasi extends CI_Controller {
 		parent::__construct();
 		
 		$this->load->model('Divisi_model');
+		$this->load->library('session');
 	}
 
 	public function index()
@@ -70,7 +71,9 @@ class Registrasi extends CI_Controller {
 		    'kebutuhan' => $this->input->post('kebutuhan'),
 		];
 		$dr=$this->db->insert('data_request', $data1);
-    	redirect('Home', 'refresh');
+		$this->session->set_userdata('registered', $data1 );
+    	redirect('Form/printed', 'refresh');
+
 	}
 
 }
