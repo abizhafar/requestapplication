@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/steyele.css"/>
     <!-- tanggalan -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-datepicker/css/datepicker4.css"/>
-    <!-- CSS dependencies -->
+    <!-- CSS navigasibar -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/nav.css">
     <!-- Script: Make my navbar transparent when the document is scrolled to top -->
     <script src="<?php echo base_url() ?>assets/javascripts/navbar-ontop.js"></script>
@@ -289,7 +289,7 @@ h1 {
 			                					<img src="<?php echo base_url() ?>assets/images/process.png" style="height: 40px" alt="pay-1">
 			                			</label>
 			                			<div class="plan-total">
-		                					<span class="plan-title">On Process</span>
+		                					<span class="plan-title">On Progress</span>
 		                					<p class="plan-text">Berarti aplikasi anda sedang dalam proses pengerjaan</p>
 		                				</div>
 										<input type="radio" class="radio" name="radio1" id="plan-3" value="plan-3" checked>
@@ -297,7 +297,7 @@ h1 {
 		                					<img src="<?php echo base_url() ?>assets/images/finish.png" style="height: 40px" alt="pay-2">
 										</label>
 										<div class="plan-total">
-		                					<span class="plan-title">Finish</span>
+		                					<span class="plan-title">Complete</span>
 		                					<p class="plan-text">Berarti aplikasi anda sudah selesai dalam proses pengerjaan dan siap untuk digunakan</p>
 		                				</div>
 		                				<p style="font-size: 25px; color: red">Peringatan!</p>
@@ -341,7 +341,7 @@ h1 {
 	];
     jQuery( "#divisi" ).autocomplete({
       source: availableTags,
-      minLength:2//gawe minimal data nde autocomplete
+      minLength:1//gawe minimal huruf nde autocomplete
     });
   } );
   </script>
