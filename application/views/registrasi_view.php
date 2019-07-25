@@ -341,7 +341,7 @@ h1 {
 	];
     jQuery( "#divisi" ).autocomplete({
       source: availableTags,
-      minLength:2//gawe minimal data nde autocomplete
+      minLength:1//gawe minimal huruf nde autocomplete
     });
   } );
   </script>
