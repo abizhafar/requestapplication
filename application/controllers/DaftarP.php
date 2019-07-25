@@ -169,10 +169,12 @@ class DaftarP extends CI_Controller {
 			 <tbody>
 			  ';
 		 }
+		print_r($psa);
 		echo $output1."".$output2;
 	}else{
 		 echo 'Data Not Found';
 	}
+	echo $trdcych;
 	}
 }
 

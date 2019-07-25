@@ -189,7 +189,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
    function load_data(psa)
    {
       $.ajax({
-         url:"<?php echo site_url() ?>/DaftarP/cari",
+         url:"<?php echo site_url() ?>/Home/cari",
          method:"POST",
          data:{psa:psa},
          success:function(data)
