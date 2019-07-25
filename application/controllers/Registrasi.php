@@ -8,6 +8,7 @@ class Registrasi extends CI_Controller {
 		parent::__construct();
 		
 		$this->load->model('Divisi_model');
+		$this->load->library('session');
 	}
 
 	public function index()
@@ -20,28 +21,28 @@ class Registrasi extends CI_Controller {
 	{
 
 		$this->db->select("no_psa");
-		$this->db->from("data_request");
-		$this->db->limit(1);
 		$this->db->order_by('no_psa',"DESC");
-		$query = $this->db->get();
+		$query = $this->db->get("data_request",1);
 		$result = $query->result();
-		if ($result->num_rows==0) {
+		if ($query->num_rows()==0) {
 			$div=substr($this->input->post('divisi'),0,5);
 			$th=date("Y");
 			$n="00";
 			$n2 = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
-			$psa=$th."".$div."".$n2;
+			$psa1=$th."".$div."".$n2;
 		}else{
 			foreach ($result as $id) {			
-				$div=substr($this->input->post('divisi'),0,5);
-				$th=date("Y");
-				$n=$id->no_psa;
-				$th_db=substr($n, 0,4);
+				 $div=substr($this->input->post('divisi'),0,5);
+				 $th=date("Y");
+				 $n=$id->no_psa;
+				 $dv=substr($n,4,5);
+				 $th_db=substr($n, 0,4);
 				if ($th>$th_db) {
 					$n="00";	
 				}
-				$n2 = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
-				$psa=$n2;
+				$no = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
+				$kd = str_replace($dv,$div,$no);
+				$psa=$kd;
 			}
 		}
 
@@ -69,10 +70,10 @@ class Registrasi extends CI_Controller {
 		    'output' => $this->input->post('output'),
 		    'kebutuhan' => $this->input->post('kebutuhan'),
 		];
-		print_r($psa);
-		// die();
 		$dr=$this->db->insert('data_request', $data1);
-    	redirect('Home', 'refresh');
+		$this->session->set_userdata('registered', $data1 );
+    	redirect('Form/printed', 'refresh');
+
 	}
 
 }
