@@ -25,14 +25,15 @@ class Registrasi extends CI_Controller {
 		$this->db->order_by('no_psa',"DESC");
 		$query = $this->db->get();
 		$result = $query->result();
-		if ($result==null) {
-			$div="";
+		if ($result->num_rows==0) {
+			$div=substr($this->input->post('divisi'),0,5);
 			$th=date("Y");
 			$n="00";
 			$n2 = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
 			$psa=$th."".$div."".$n2;
 		}else{
-			foreach ($result as $id) {				
+			foreach ($result as $id) {			
+				$div=substr($this->input->post('divisi'),0,5);
 				$th=date("Y");
 				$n=$id->no_psa;
 				$th_db=substr($n, 0,4);
@@ -68,6 +69,8 @@ class Registrasi extends CI_Controller {
 		    'output' => $this->input->post('output'),
 		    'kebutuhan' => $this->input->post('kebutuhan'),
 		];
+		print_r($psa);
+		// die();
 		$dr=$this->db->insert('data_request', $data1);
     	redirect('Home', 'refresh');
 	}
