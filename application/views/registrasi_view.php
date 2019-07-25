@@ -24,7 +24,7 @@
     <script src="<?php echo base_url() ?>assets/javascripts/animate-in.js"></script>
     <!-- markdown -->
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" /> -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/csgo/bs-markdown.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap-markdown/csgo/csgo-markdown.min.css" />
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootrap/css/gaemark.css" /> -->
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootrap/css/bootstrap.css" /> -->
 
