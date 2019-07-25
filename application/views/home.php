@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="https://pmb.aknbojonegoro.ac.id/wp-content/uploads/2019/02/cropped-polinema.png">
   <title>Form Application Request</title>
   <!-- CSS dependencies -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/aquamarine.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/aquaman.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <!-- Script: Make my navbar transparent when the document is scrolled to top -->
   <script src="<?php echo base_url() ?>assets/javascripts/navbar-ontop.js"></script>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
 
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.css" /> -->
 
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme.css" /> -->
 
