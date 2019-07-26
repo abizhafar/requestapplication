@@ -24,7 +24,7 @@ class DaftarP extends CI_Controller {
 	function get_data(){
 		// $table="data_request";
 		$table = "
-		 ( SELECT * FROM data_request 
+		 ( SELECT * FROM data_request
 		 ) temp
 		";
 		 
@@ -33,7 +33,7 @@ class DaftarP extends CI_Controller {
 		 
 		$columns = array(
 		    array(
-		        'db' => 'no_psa',
+		        'db' => 'tgl_input',
 		        'dt' => 'DT_RowId',
 		        'formatter' => function( $d, $row ) {
 		            return 'row_'.$d;

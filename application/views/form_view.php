@@ -1,4 +1,4 @@
-
+<form id="add-row-form" action="<?php echo base_url().'index.php/Form/update'?>" method="post">
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="form-group">
@@ -146,7 +146,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inline">
 					<label>
-						<input type="radio" id="optradi3" name="status" value="3" >
+						<input type="radio" id="optradio3" name="status" value="3" >
 							Application in Trial
 					</label>
 			</div>
@@ -154,7 +154,7 @@
 		<div class="col-sm-6">
 			<div class="radio-inlinea">
 					<label>
-					<input type="radio" id="optradi4" name="status" value="4" >
+					<input type="radio" id="optradio4" name="status" value="4" >
 							Application Complete
 					</label>
 			</div>
@@ -163,8 +163,9 @@
 		
 		<br><br>
 		<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-save"></i> SIMPAN</button>
+</form>
 			&nbsp &nbsp
-		<button class="btn btn-success"><i class="glyphicon glyphicon-print"></i> PRINT</button>
+			
 	</div>	
 										
 

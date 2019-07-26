@@ -76,6 +76,13 @@
 		</tr>
 		</tbody>
 	</table>
+	<br>
+	<div class="container">
+		<b><p>Note:</p></b>
+		<p>*Status aplikasi menunggu konfirmasi dari pihak Divisi Teknologi.</p>
+		<p>*Status aplikasi dapat dicek pada halaman awal web, dengan memasukkan Nomor PSA.</p>
+	</div>
+	
 </div>
 <?php 
 	if (!$this->session->userdata('registered')) {?>
@@ -144,7 +151,13 @@
 
 $('#btprint').on('click' , function() { 
   $('.modal').modal('hide');
+  var tempTitle = document.title;
+    document.title = "Form Permintaan Aplikasi.pdf";
   window.print();
+  document.title = tempTitle;
+
+  location.replace("<?php echo site_url() ?>/DaftarP");
+
 });
 
 </script>

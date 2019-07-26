@@ -21,7 +21,7 @@ class Registrasi extends CI_Controller {
 	{
 
 		$this->db->select("no_psa");
-		$this->db->order_by('no_psa',"DESC");
+		$this->db->order_by('tgl_input',"DESC");
 		$query = $this->db->get("data_request",1);
 		$result = $query->result();
 		if ($query->num_rows()==0) {
@@ -29,23 +29,23 @@ class Registrasi extends CI_Controller {
 			$th=date("Y");
 			$n="00";
 			$n2 = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
-			$psa1=$th."".$div."".$n2;
+			$psa=$th."".$div."".$n2;
 		}else{
 			foreach ($result as $id) {			
 				 $div=substr($this->input->post('divisi'),0,5);
 				 $th=date("Y");
-				 $n=$id->no_psa;
-				 $dv=substr($n,4,5);
-				 $th_db=substr($n, 0,4);
+				 $psa=$id->no_psa;
+				 $dv=substr($psa,4,5);
+				 $th_db=substr($psa, 0,4);
+				 echo $n=substr($psa, 9,2);
 				if ($th>$th_db) {
 					$n="00";	
 				}
 				$no = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
-				$kd = str_replace($dv,$div,$no);
-				$psa=$kd;
+				echo $psa=$th."".$div."".$no;
 			}
 		}
-
+		// die();
 		date_default_timezone_set('Asia/Jakarta');
 		$date = $this->input->post('tgl_digunakan');
 		$timestamp = strtotime($date);
@@ -69,6 +69,7 @@ class Registrasi extends CI_Controller {
 		    'proses' => $this->input->post('proses'),
 		    'output' => $this->input->post('output'),
 		    'kebutuhan' => $this->input->post('kebutuhan'),
+		    'tgl_input' => date("Y-m-d H:i:s"),
 		];
 		$dr=$this->db->insert('data_request', $data1);
 		$this->session->set_userdata('registered', $data1 );

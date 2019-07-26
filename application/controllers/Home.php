@@ -97,7 +97,8 @@
 		 	switch($value->status) {
 		               case '1' : $status='<td><span class="label label-warning">Waiting</span></td>'; break;
 		               case '2' : $status='<td><span class="label label-primary">On-Process</span></td>'; break;
-		               case '3' : $status='<td><span class="label label-success">Deployment</span></td>'; break;
+		               case '3' : $status='<td><span class="label label-info">In Trial</span></td>'; break;
+		               case '4' : $status='<td><span class="label label-success">Deployment</span></td>'; break;
 		               default  : $status='<td>N/A</td>';}
 		 	$output2 = '
 			 <tbody>  

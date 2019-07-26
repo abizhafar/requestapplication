@@ -48,7 +48,6 @@
 
 			
 		</section>
-		<form id="add-row-form" action="<?php echo base_url().'index.php/Form/update'?>" method="post">
            <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog" style="width: 70%">
                  <div class="modal-content">
@@ -60,13 +59,14 @@
                          <?php $this->view('form_view.php'); ?>
                      </div>
                      <div class="modal-footer">
-                         <!--  <button type="button" class="btn btn-default" data-dismiss="modal">TUTUP</button>
-                          <button type="submit" id="add-row" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i> PERBARUI</button> -->
+                     	<form action="<?php echo site_url('Form/printed') ?>" method="post">
+				<input type="text" name="no_psa" style="display: none">
+			<button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-print"></i> PRINT</button>
+			</form>
                      </div>
                   </div>
               </div>
            </div>
-       </form>
 <?php $this->view('footer.php'); ?>
 <script>
 	/* Formatting function for row details - modify as you need */
@@ -164,7 +164,7 @@ $(document).ready(function() {
 		          
 		        
 		   ],
-        "order": [[1, 'asc']],
+        "order": [[0, 'asc']],
 	} );
 
 $('#example').on('click','.edit_record',function(){
@@ -198,13 +198,13 @@ $('#example').on('click','.edit_record',function(){
         $('[name="tgl_digunakan"]').val(tgl_digunakan);
         $('[name="tgl_proses"]').val(tgl_proses);
         $('[name="tgl_deploy"]').val(tgl_deploy);
-        $('[id="permasalahan"]').text(permasalahan);
-        $('[id="fungsi"]').text(fungsi);
-        $('[id="input"]').text(input);
-        $('[id="pengguna"]').text(pengguna);
-        $('[id="proses"]').text(proses);
-        $('[id="output"]').text(output);
-        $('[id="kebutuhan"]').text(kebutuhan);
+        $('[name="permasalahan"]').text(permasalahan);
+        $('[name="fungsi"]').text(fungsi);
+        $('[name="input"]').text(input);
+        $('[name="pengguna"]').text(pengguna);
+        $('[name="proses"]').text(proses);
+        $('[name="output"]').text(output);
+        $('[name="kebutuhan"]').text(kebutuhan);
         if(status=="1"){
           $('input[id="optradio1"]').prop('checked',true);
         }else if(status=="2"){
