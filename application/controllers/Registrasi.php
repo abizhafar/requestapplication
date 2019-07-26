@@ -37,12 +37,12 @@ class Registrasi extends CI_Controller {
 				 $psa=$id->no_psa;
 				 $dv=substr($psa,4,5);
 				 $th_db=substr($psa, 0,4);
-				 echo $n=substr($psa, 9,2);
+				 $n=substr($psa, 9,2);
 				if ($th>$th_db) {
 					$n="00";	
 				}
 				$no = str_pad($n + 1, 2, 0, STR_PAD_LEFT);
-				echo $psa=$th."".$div."".$no;
+				$psa=$th."".$div."".$no;
 			}
 		}
 		// die();
