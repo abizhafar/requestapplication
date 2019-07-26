@@ -64,7 +64,7 @@ class Form extends CI_Controller {
 
      $data=array(
       'nama_user'   => $this->input->post('nama_user'),
-      'no_telp'    => $this->input->post('no_tlp'),
+      'no_telp'    => $this->input->post('no_telp'),
       'divisi'	  => $this->input->post('divisi'),
       'departemen' => $this->input->post('departemen'),
       'tgl_interview' => date("Y-m-d",$tgl_interview),
