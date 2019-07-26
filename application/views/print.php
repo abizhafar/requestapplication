@@ -2,10 +2,8 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.css" />
 
 <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme.css" /> -->
-
-<br>
-<div class="container">
-	<p style="text-align: left; margin-left:30px;"><img src="https://2.bp.blogspot.com/-g7Uwzl9YK9g/Uzp_ciLlX9I/AAAAAAAAQoE/qSEoPS4fsgs/s1600/LOGO+PAL+INDONESIA.png" alt="" width="197" height="43" /></p>
+	<br>
+<div class="container" ><img style="text-align: left; margin-left:30px;" src="<?php echo base_url() ?>assets/images/LOGOPAL.png" alt="" width="197" height="43" /></p>
 	<hr style="height: 0px; background-color: navy; border:5px solid navy; color:navy;" />
 	<h2 style="text-align: center;">&nbsp;<strong><u>FORM PERMINTAAN SOFTWARE APLIKASI <br> DIVISI TEKNOLOGI INFORMASI</u></strong></h2><br>
 	
@@ -43,7 +41,6 @@
 			</tr>
 			</tbody>
 		</table>
-<br>
 	<h4><strong>Uraian Kebutuhan Software Aplikasi:</strong></p></h4>
 	<table class="table table-bordered" style="height: 103px; width: 100%;">
 		<tbody>
@@ -80,7 +77,36 @@
 		</tbody>
 	</table>
 </div>
-<div class="modal fade" id="overlay">
+<?php 
+	if (!$this->session->userdata('registered')) {?>
+		<div class="modal fade" id="overlay">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header" style="background: #0088cc; color: white">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title"> Cetak Form Permintaan Aplikasi</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div style="padding-left: 20px">
+		        	<table>
+		        		<tr>
+		        			<td><h1 style="font-size: 70px; color:#0088cc;"><i class="fa fa-exclamation"></i></h1></td>
+		        			<td style="padding-left: 30px"><h3>Cetak Form </h3>
+							<!-- <br> -->
+							<p style="color: red">Cetak / unduh form ini sebagai tanda bukti !</p>
+		        			</td>
+		        		</tr>
+		        	</table>
+		        </div>
+		      </div>
+		       <div class="modal-footer">
+		       	<button class="btn btn-primary" id="btprint"><i class="fa fa-print"></i> Cetak Form Permintaan</button>
+		       </div>
+		    </div>
+		  </div>
+		</div>
+<?php } else { ?>
+	<div class="modal fade" id="overlay">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background: #47a447; color: white">
@@ -101,12 +127,14 @@
         </div>
       </div>
        <div class="modal-footer">
-       	<a href="<?php echo site_url() ?>/Home" class="btn btn-default"><i class="fa fa-times"></i> Keluar</a>
-       	<button class="btn btn-primary"><i class="fa fa-print"></i> Cetak Form Permintaan</button>
+       	<button class="btn btn-primary" id="btprint"><i class="fa fa-print"></i> Cetak Form Permintaan</button>
        </div>
     </div>
   </div>
 </div>
+<?php } ?>
+
+
 	<?php } ?>
 
 		<script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.js"></script>
@@ -114,22 +142,9 @@
 <script>
 	$('#overlay').modal('show');
 
-// setTimeout(function() {
-//     $('#overlay').modal('hide');
-// }, 5000);
-// var doc = new jsPDF();
-// var specialElementHandlers = {
-//     '#editor': function (element, renderer) {
-//         return true;
-//     }
-// };
-
-// $('#cmd').click(function () {
-//     doc.fromHTML($('#content').html(), 15, 15, {
-//         'width': 170,
-//             'elementHandlers': specialElementHandlers
-//     });
-//     doc.save('sample-file.pdf');
-// });
+$('#btprint').on('click' , function() { 
+  $('.modal').modal('hide');
+  window.print();
+});
 
 </script>

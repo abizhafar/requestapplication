@@ -11,6 +11,9 @@
 		}
 		public function index()
 		{
+			$this->session->unset_userdata('logged_in');
+			$this->session->unset_userdata('registered');
+			$this->session->sess_destroy();
 			$this->load->view('home');		
 		}
 
@@ -85,6 +88,8 @@
 		        <th>Tanggal Interview User</th>
 		        <th>Tanggal Rencana Digunakan</th>
 		        <th>Status</th>
+		        <th>Aksi</th>
+
 		    </tr>
 		    </thead>
 		 ';
@@ -106,7 +111,8 @@
 			    <td>'.$value->tgl_interview.'</td>
 			    <td>'.$value->tgl_digunakan.'</td>'.
 			    	$status
-			    .'
+			    .'<td><form method="post" action="'.site_url('Form/printed').'"><input value="'.$value->no_psa.'" name="no_psa" style="display:none"><button type="submit" class="btn btn-primary"><i class="fa fa-print"></i></button>
+			    </form>
 			   </tr>
 			 <tbody>
 			  ';

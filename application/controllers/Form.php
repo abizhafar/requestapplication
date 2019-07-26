@@ -19,6 +19,9 @@ class Form extends CI_Controller {
 
 		$session_data=$this->session->userdata('registered');
 		$no_psa=$session_data['no_psa'];
+		if (!$this->session->userdata('registered')) {
+			$no_psa=$this->input->post('no_psa');
+		}
 
 		$this->db->where('no_psa', $no_psa);
 		$get=$this->db->get('data_request', 1);
