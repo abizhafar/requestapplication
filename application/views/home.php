@@ -115,7 +115,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <div class="col-lg-12 text-white mt-5">
           <h2 class="text-capitalize w-100" style=""><b>WELCOME</b></h2>
           <h3 class="display-3">Form Application Request</h3>
-          <h3 style="" class=""><b>DIVISI TEKNOLOGI PT. PAL INDONESIA</b></h3>
+          <h3 style="" class=""><b>DIVISI TEKNOLOGI INFORMASI PT. PAL INDONESIA</b></h3>
           <a href="<?php echo site_url('') ?>/Registrasi" class="btn btn-lg mt-4 btn-outline-light">Daftarkan Permintaan Aplikasi</a>
         </div>
       </div>
@@ -166,7 +166,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       
       <div class="row">
         <div class="col-md-12">
-          <p class="text-muted">© Copyright 2019 PT. PAL INDONESIA - DIVISI TEKNOLOGI </p> 
+          <p class="text-muted">© Copyright 2019 PT. PAL INDONESIA - DIVISI TEKNOLOGI INFORMASI</p> 
         </div>
       </div>
     </div>
