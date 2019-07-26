@@ -135,7 +135,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
           <form action="">
             <div class="input-group">
               <input type="text" class="form-control form-control-lg" id="psa" name="psa" placeholder="Nomor Registrasi PSA">
-              <div class="input-group-append"><button class="btn btn-outline-primary btn-lg text-blue" type="button" onclick="myFunction()" id="cari">Cari</button></div>
+              <!-- <div class="input-group-append"><button class="btn btn-outline-primary btn-lg text-blue" type="button" onclick="myFunction()" id="cari">Cari</button></div> -->
             </div>
           </form>
         </div>
