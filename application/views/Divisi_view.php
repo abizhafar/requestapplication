@@ -20,7 +20,7 @@
 
 						<section class="panel">
 							<header class="panel-heading">						
-								<h2 class="panel-title">TABLE DIVISI</h2>
+								<h2 class="panel-title">TABEL DIVISI</h2>
 							</header>
 							<div class="panel-body">
 											<button class="btn navbar-btn mx-auto text-white btn-outline-light" data-toggle="modal" data-target="#myModalAdd" class onclick="delrec()"><i class="glyphicon glyphicon-plus"></i> TAMBAH DIVISI</button>
