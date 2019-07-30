@@ -282,7 +282,7 @@ h1 {
 			                			</label>
 			                			<div class="plan-total">
 		                					<span class="plan-title">Waiting</span>
-		                					<p class="plan-text">Keterangan : Aplikasi berada dalam daftar tunggu Divisi Teknologi Informasi menunggu diproses</p>
+		                					<p class="plan-text">Keterangan : Aplikasi masih di daftar tunggu Divisi Teknologi Informasi menunggu diproses</p>
 		                				</div>
 			                			<input type="radio" class="radio" name="radio1" id="plan-2" value="plan-2">
 			                			<label class="plan-icon plan-2-label" for="plan-2" style="background-color: #45dc31">
@@ -298,10 +298,10 @@ h1 {
 										</label>
 										<div class="plan-total">
 		                					<span class="plan-title">Complete</span>
-		                					<p class="plan-text">Keterangan : aplikasi selesai dalam proses pengerjaan dan siap untuk digunakan</p>
+		                					<p class="plan-text">Keterangan : aplikasi selesai proses pengerjaan dan siap untuk digunakan</p>
 		                				</div>
-		                				<p style="font-size: 25px; color: red">Peringatan!</p>
-		                				<p style="color: red">Pastikan data yang anda isi <b>benar</b>. Jika terjadi kesalahan dalam pengisian data dapat langsung melapor ke Divisi Teknologi Informasi dengan menunjukan <b>Nomor PSA</b></p>
+		                				<p style="font-size: 25px; color: red">PERINGATAN!</p>
+		                				<p style="color: red">Pastikan data yang anda isi <b>BENAR</b>. Jika terjadi kesalahan dalam pengisian data langsung melapor ke Divisi Teknologi Informasi dengan menunjukan <b>NOMOR PSA</b></p>
 			                		</div>
 			                	</div>
 							</div>
