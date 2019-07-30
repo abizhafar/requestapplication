@@ -1,7 +1,21 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.css" />
-
+<!-- CSS navigasibar -->
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/nav.css">
+<!-- Script: Make my navbar transparent when the document is scrolled to top -->
+<script src="<?php echo base_url() ?>assets/javascripts/navbar-ontop.js"></script>
+<!-- Script: Animated entrance -->
+<script src="<?php echo base_url() ?>assets/javascripts/animate-in.js"></script>
 <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/stylesheets/theme.css" /> -->
+<nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+	<div class="container">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse justify-content-center" id="navbar2SupportedContent">
+			<a class="navbar-brand" href="<?php echo site_url() ?>/Home"><img width="120px" src="<?php echo base_url() ?>assets/images/logopal.png" alt=""></a>	
+		</div>
+	</div>
+</nav>
+
 	<br>
 <div class="container" ><img style="text-align: left; margin-left:30px;" src="<?php echo base_url() ?>assets/images/LOGOPAL.png" alt="" width="197" height="43" /></p>
 	<hr style="height: 0px; background-color: navy; border:5px solid navy; color:navy;" />
