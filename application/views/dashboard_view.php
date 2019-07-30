@@ -29,7 +29,7 @@
 										<div class="summary">
 											<h4 class="title">Status Project Waiting</h4>
 											<div class="warning">
-												<strong class="amount">1281</strong>
+												<strong class="amount"><?php echo $waiting ?></strong>
 											</div>
 										</div>
 									</div>
@@ -50,7 +50,7 @@
 										<div class="summary">
 											<h4 class="title">Status Project On-Progress</h4>
 											<div class="info">
-												<strong class="amount">1281</strong>
+												<strong class="amount"><?php echo $proses ?></strong>
 											</div>
 										</div>
 									</div>
@@ -71,7 +71,7 @@
 										<div class="summary">
 											<h4 class="title">Status Project Testing</h4>
 											<div class="info">
-												<strong class="amount">1281</strong>
+												<strong class="amount"><?php echo $trial ?></strong>
 											</div>
 										</div>
 									</div>
@@ -92,7 +92,7 @@
 										<div class="summary">
 											<h4 class="title">Status Project Deploy</h4>
 											<div class="info">
-												<strong class="amount">1281</strong>
+												<strong class="amount"><?php echo $deploy ?></strong>
 											</div>
 										</div>
 									</div>
@@ -225,7 +225,8 @@ $(document).ready(function() {
 		            switch(data) {
 		               case '1' : return '<span class="label label-warning">Waiting</span>'; break;
 		               case '2' : return '<span class="label label-primary">On-Process</span>'; break;
-		               case '3' : return '<span class="label label-success">Deployment</span>'; break;
+		               case '3' : return '<span class="label label-info">In Trial</span>'; break;
+		               case '4' : return '<span class="label label-success">Deployment</span>'; break;
 		               default  : return 'N/A';
 		            }
 		          }
