@@ -142,7 +142,7 @@ h1 {
 			                <div class="inner">
 			                	<div class="wizard-header">
 									<h3 class="heading">Informasi User</h3>
-									<p>Silakan masukkan informasi Anda dan lanjutkan ke langkah berikutnya  </p>
+									<p>Silahkan masukkan data informasi dan lanjutkan sampai langkah berikutnya  </p>
 								</div>
 								<div class="form-row">
 									<div class="form-holder">
@@ -272,7 +272,7 @@ h1 {
 			                <div class="inner">
 			                	<div class="wizard-header">
 									<h3 class="heading">Informasi Status</h3>
-									<p>Terdapat 3 jenis informasi status yang akan anda temukan pada halaman landing page. </p>
+									<p>Terdapat 3 jenis informasi status yang akan anda temukan pada halaman utama </p>
 								</div>
 								<div class="form-row">
 			                		<div class="form-holder form-holder-2">
@@ -282,7 +282,7 @@ h1 {
 			                			</label>
 			                			<div class="plan-total">
 		                					<span class="plan-title">Waiting</span>
-		                					<p class="plan-text">Berarti Aplikasi anda sedang berada dalam waiting list Divisi Teknologi menunggu untuk di proses</p>
+		                					<p class="plan-text">Keterangan : Aplikasi berada dalam daftar tunggu Divisi Teknologi Informasi menunggu diproses</p>
 		                				</div>
 			                			<input type="radio" class="radio" name="radio1" id="plan-2" value="plan-2">
 			                			<label class="plan-icon plan-2-label" for="plan-2" style="background-color: #45dc31">
@@ -290,7 +290,7 @@ h1 {
 			                			</label>
 			                			<div class="plan-total">
 		                					<span class="plan-title">On Progress</span>
-		                					<p class="plan-text">Berarti aplikasi anda sedang dalam proses pengerjaan</p>
+		                					<p class="plan-text">Keterangan : aplikasi sedang dalam proses pengerjaan</p>
 		                				</div>
 										<input type="radio" class="radio" name="radio1" id="plan-3" value="plan-3" checked>
 										<label class="plan-icon plan-3-label" for="plan-3" style="background-color: #31afdc">
@@ -298,10 +298,10 @@ h1 {
 										</label>
 										<div class="plan-total">
 		                					<span class="plan-title">Complete</span>
-		                					<p class="plan-text">Berarti aplikasi anda sudah selesai dalam proses pengerjaan dan siap untuk digunakan</p>
+		                					<p class="plan-text">Keterangan : aplikasi selesai dalam proses pengerjaan dan siap untuk digunakan</p>
 		                				</div>
 		                				<p style="font-size: 25px; color: red">Peringatan!</p>
-		                				<p style="color: red">Pastikan data yang anda isi sudah benar. Jika terjadi kesalahan dalam pengisian data dapat langsung melapor ke Divisi Teknologi dengan menunjukan Nomor PSA</p>
+		                				<p style="color: red">Pastikan data yang anda isi <b>benar</b>. Jika terjadi kesalahan dalam pengisian data dapat langsung melapor ke Divisi Teknologi Informasi dengan menunjukan <b>Nomor PSA</b></p>
 			                		</div>
 			                	</div>
 							</div>

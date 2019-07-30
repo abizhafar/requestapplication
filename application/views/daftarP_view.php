@@ -35,6 +35,7 @@
 							                <th>Tanggal Interview User</th>
 							                <th>Tanggal Rencana Digunakan</th>
 							                <th>Status</th>
+							                <th>Tanggal Dokumen</th>
 							                <th>Aksi</th>
 
 							            </tr>
@@ -137,6 +138,7 @@ $(document).ready(function() {
             { "data": "tgl_interview", defaultContent: ""},
             { "data": "tgl_digunakan" },
             { "data": "status" },
+            { "data": "tgl_input", "visible":false },
             { "data": "", "visible":true,"orderable":false, "searchable": false, "render": function (data, type, row) {
                   return '<a class="edit_record" data-no_psa="'+row.no_psa+'" data-nama_user="'+row.nama_user+'" data-no_telp="'+row.no_telp+'" data-divisi="'+row.divisi+'"data-departemen="'+row.departemen+'" data-nama_aplikasi="'+row.nama_aplikasi+'"data-tgl_interview="'+row.tgl_interview+'"data-tgl_digunakan="'+row.tgl_digunakan+'" data-status="'+row.status+'"  data-tgl_proses="'+row.tgl_onproses+'" data-tgl_deploy="'+row.tgl_deploy+'" data-permasalahan="'+row.permasalahan+'" data-fungsi="'+row.fungsi+'" data-pengguna="'+row.pengguna+'" data-input="'+row.input+'" data-proses="'+row.proses+'" data-output="'+row.output+'" data-kebutuhan="'+row.kebutuhan+'" href="javascript:void(0);" ><i style="font-size:20px" class="icon fa fa-edit"></i></a>'; }
         	}],
@@ -164,7 +166,7 @@ $(document).ready(function() {
 		          
 		        
 		   ],
-        "order": [[0, 'asc']],
+        "order": [[10, 'asc']],
 	} );
 
 $('#example').on('click','.edit_record',function(){

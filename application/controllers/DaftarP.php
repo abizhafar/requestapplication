@@ -33,7 +33,7 @@ class DaftarP extends CI_Controller {
 		 
 		$columns = array(
 		    array(
-		        'db' => 'tgl_input',
+		        'db' => 'no_psa',
 		        'dt' => 'DT_RowId',
 		        'formatter' => function( $d, $row ) {
 		            return 'row_'.$d;
@@ -53,6 +53,7 @@ class DaftarP extends CI_Controller {
 		    array( 'db' => 'output',     'dt' => 'output' ),
 		    array( 'db' => 'kebutuhan',     'dt' => 'kebutuhan' ),
 		    array( 'db' => 'status',     'dt' => 'status' ),
+		    array( 'db' => 'tgl_input',     'dt' => 'tgl_input' ),
 		    array( 
 			    	'db' => 'tgl_interview', 
 			    	'dt' => 'tgl_interview',
